@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+docs/
+
+# Environment variables
+.env*
+*.local
+
+# Vercel
+.vercel
+
+# Logs
+*.log
+
+# Vite/Package cache
+.vite/
+
+# Astro
+.cache/
+
+# Starter kit
+mvgnlabs-starter-kit-main/
+mvgnlabs-starter-kit-main.zip
+
+# OS/Docker
+.DS_Store

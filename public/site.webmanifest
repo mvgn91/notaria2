@@ -1,0 +1,16 @@
+{
+    "name": "Notaría Pública #80",
+    "short_name": "Notaría 80",
+    "description": "Servicios notariales profesionales con más de una década de experiencia. Maestra María Enriqueta Ortiz Guerrero.",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ],
+    "theme_color": "#2d4c39",
+    "background_color": "#f6f3eb",
+    "display": "standalone",
+    "start_url": "/"
+}

@@ -1,0 +1,746 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+---
+
+<BaseLayout currentPath="/">
+
+  <!-- ── HERO ── -->
+  <section class="hero-section relative min-h-screen flex items-center bg-gradient-to-br from-primary-dark via-primary to-primary-dark">
+    <!-- Crossfade background: 3 imágenes legales con transición suave -->
+    <div class="hero-bg-crossfade" style="background-image: url('https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920')"></div>
+    <div class="hero-bg-crossfade" style="background-image: url('https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg?auto=compress&cs=tinysrgb&w=1920')"></div>
+    <div class="hero-bg-crossfade" style="background-image: url('https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1920')"></div>
+    <div class="hero-pattern"></div>
+    <div class="floating-shape floating-shape-1"></div>
+    <div class="floating-shape floating-shape-2"></div>
+
+    <!-- Logo watermark — esquina inferior derecha, completo, sin invadir el contenido -->
+    <img src="/logo%20notaria%2080%20verde.png" alt=""
+      class="absolute bottom-8 right-8 z-[5] w-[42vw] max-w-[520px] h-auto opacity-[0.10] lg:opacity-[0.08] pointer-events-none select-none brightness-0 invert"
+      aria-hidden="true">
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+      <div class="max-w-3xl">
+        <!-- Badge -->
+        <div class="reveal mb-10">
+          <span class="inline-flex items-center gap-2.5 glass rounded-full px-5 py-2 text-cream text-sm font-medium tracking-[0.15em] uppercase">
+            <i class="fas fa-gavel text-cream/70 text-xs"></i>
+            Fe Pública · Seguridad Jurídica
+          </span>
+        </div>
+
+        <!-- Main heading: editorial stacked layout -->
+        <h1 class="font-display text-cream reveal" style="transition-delay: 0.1s;">
+          <span class="block text-sm font-semibold text-cream/50 tracking-[0.3em] uppercase mb-6 font-body">Notaría Pública #80</span>
+          <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.04] tracking-tight drop-shadow-xl">
+            Garantizamos
+          </span>
+          <span class="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light italic mt-4 text-cream/85 drop-shadow-lg">
+            seguridad jurídica
+          </span>
+          <span class="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium not-italic mt-2 text-cream drop-shadow-lg">
+            e imparcialidad
+          </span>
+        </h1>
+
+        <!-- Editorial divider -->
+        <div class="flex items-center gap-4 my-10 reveal" style="transition-delay: 0.15s;">
+          <span class="block w-12 h-px bg-cream/20"></span>
+          <span class="block w-1.5 h-1.5 rounded-full bg-primary-light/50"></span>
+          <span class="block flex-1 h-px bg-cream/10"></span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-base sm:text-lg text-cream/55 max-w-xl leading-relaxed reveal mb-12" style="transition-delay: 0.2s;">
+          Brindamos servicios notariales profesionales con la más alta calidad y el compromiso de hacer la justicia accesible para todos.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4 reveal" style="transition-delay: 0.3s;">
+          <a href="servicios.html" class="btn-primary px-8 py-3.5 rounded-2xl font-semibold flex items-center justify-center gap-3 shadow-2xl shadow-black/20">
+            <i class="fas fa-arrow-right"></i> Nuestros Servicios
+          </a>
+          <a href="https://wa.me/523311704104" target="_blank" class="glass px-8 py-3.5 rounded-2xl text-cream font-semibold flex items-center justify-center gap-3 hover:bg-cream/15 transition-all">
+            <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator removed per user request -->
+  </section>
+
+
+  <!-- ── SERVICIOS PREVIEW ── -->
+  <section class="py-24 lg:py-32 bg-gradient-to-b from-cream to-cream-dark relative overflow-hidden">
+    <!-- Decorative top line -->
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="text-primary-light text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">Nuestros Servicios</span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-primary leading-tight mb-6">
+          Soluciones notariales <span class="text-primary-light font-light italic">integrales</span>
+        </h2>
+        <p class="text-gray-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          Cada trámite notarial merece certeza y profesionalismo. Te acompañamos paso a paso con soluciones integrales que garantizan seguridad jurídica y total tranquilidad.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 stagger-children">
+
+        <!-- Servicio 1 -->
+        <div class="service-card group relative overflow-hidden">
+          <span class="absolute -top-4 -right-4 text-[8rem] font-display font-black text-cream/5 leading-none pointer-events-none select-none">01</span>
+          <div class="relative z-10">
+            <div class="service-card-icon mb-6">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-cream mb-3 group-hover:text-cream/80 transition-colors">Traslativos de Dominio</h3>
+            <p class="text-cream/65 text-sm leading-relaxed mb-5">
+              Escrituración de propiedades con total seguridad jurídica y transparencia.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="service-tag">Compraventa</span>
+              <span class="service-tag">Donación</span>
+              <span class="service-tag">Fideicomisos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="service-card group relative overflow-hidden">
+          <span class="absolute -top-4 -right-4 text-[8rem] font-display font-black text-cream/5 leading-none pointer-events-none select-none">02</span>
+          <div class="relative z-10">
+            <div class="service-card-icon mb-6">
+              <i class="fas fa-scroll"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-cream mb-3 group-hover:text-cream/80 transition-colors">Sucesiones</h3>
+            <p class="text-cream/65 text-sm leading-relaxed mb-5">
+              Elaboración de testamentos y asesoría especializada en herencias.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="service-tag">Testamentos</span>
+              <span class="service-tag">Sucesión Testamentaria</span>
+              <span class="service-tag">Intestamentaria</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="service-card group relative overflow-hidden">
+          <span class="absolute -top-4 -right-4 text-[8rem] font-display font-black text-cream/5 leading-none pointer-events-none select-none">03</span>
+          <div class="relative z-10">
+            <div class="service-card-icon mb-6">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-cream mb-3 group-hover:text-cream/80 transition-colors">Corporativo</h3>
+            <p class="text-cream/65 text-sm leading-relaxed mb-5">
+              Formalización de empresas y sociedades mercantiles.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="service-tag">Constitución</span>
+              <span class="service-tag">Asambleas</span>
+              <span class="service-tag">Fusión/Escisión</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA Banner -->
+      <div class="mt-16 reveal">
+        <a href="servicios.html" class="group relative block overflow-hidden rounded-3xl bg-gradient-to-br from-primary-dark via-primary to-primary-dark p-8 md:p-10 shadow-2xl border border-cream/15 hover:border-cream/25 transition-all">
+          <div class="floating-shape floating-shape-1 opacity-60" style="width: 200px; height: 200px; top: -60px; right: -40px;"></div>
+          <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <span class="inline-flex items-center gap-2 glass text-cream/80 text-xs font-semibold tracking-[0.15em] uppercase px-4 py-1.5 rounded-full mb-4">
+                <i class="fas fa-gavel"></i> Descubre todo nuestro portafolio
+              </span>
+              <h3 class="font-display text-3xl md:text-4xl font-bold text-cream">
+                ¿Listo para comenzar?
+              </h3>
+              <p class="text-cream/60 mt-2 max-w-md text-sm md:text-base">
+                Explora la lista completa de servicios notariales con toda la información detallada.
+              </p>
+            </div>
+            <div class="flex-shrink-0 glass rounded-2xl px-8 py-4 text-cream font-semibold flex items-center gap-3 group-hover:bg-cream/15 transition-all group-hover:translate-x-1">
+              Ver todos los servicios
+              <i class="fas fa-arrow-right text-sm"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MISIÓN, VISIÓN Y VALORES ── -->
+  <section class="py-24 lg:py-32 relative overflow-hidden">
+    <!-- Full-bleed background image covering toda la sección -->
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/1181722/pexels-photo-1181722.jpeg?auto=compress&cs=tinysrgb&w=1920'); background-position: center 30%; filter: saturate(0.3);"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-primary-dark/75 via-primary/70 to-primary-dark/80"></div>
+    <div class="floating-shape floating-shape-3" style="top: 20%; right: 5%;"></div>
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+      <div class="text-center mb-16 reveal">
+        <span class="text-cream/80 text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">Nuestra Esencia</span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-cream mb-4">
+          Misión, Visión y Valores
+        </h2>
+        <p class="text-cream/60 text-sm sm:text-base max-w-lg mx-auto leading-relaxed mt-3">Principios que definen nuestra forma de trabajar y relacionarnos con cada cliente que confía en nosotros.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12 mb-20">
+        <!-- Misión -->
+        <div class="bg-cream rounded-3xl reveal-left shadow-xl border border-primary/5 hover:shadow-2xl transition-all duration-500 relative overflow-hidden group hover:-translate-y-1.5">
+          <!-- Full-width top gradient accent bar -->
+          <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary-light via-primary to-primary-dark rounded-t-3xl"></div>
+          <!-- Número editorial de fondo -->
+          <span class="absolute -bottom-4 -right-4 text-[10rem] font-display font-black text-primary/[0.04] leading-none pointer-events-none select-none group-hover:scale-110 group-hover:text-primary/[0.07] transition-all duration-700">01</span>
+          <!-- Bottom gradient fade -->
+          <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-primary/[0.06] to-transparent pointer-events-none"></div>
+          <div class="relative z-10 pt-10 p-8 lg:p-10 lg:pt-14">
+            <div class="flex items-center gap-5 mb-6">
+              <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-light to-primary flex items-center justify-center text-cream text-3xl shrink-0 shadow-2xl shadow-primary/25 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 ring-2 ring-primary-light/20">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <div>
+                <h3 class="font-display text-3xl font-bold text-primary">Misión</h3>
+              </div>
+            </div>
+            <p class="text-base md:text-lg leading-relaxed text-gray-700">
+              Ofrecer servicios notariales con la más alta calidad y calidez humana, garantizando la seguridad jurídica de cada acto y construyendo relaciones de confianza duraderas con nuestros clientes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Visión -->
+        <div class="bg-cream rounded-3xl reveal-right shadow-xl border border-primary/5 hover:shadow-2xl transition-all duration-500 relative overflow-hidden group hover:-translate-y-1.5">
+          <!-- Full-width top gradient accent bar -->
+          <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary-light via-primary to-primary-dark rounded-t-3xl"></div>
+          <!-- Número editorial de fondo -->
+          <span class="absolute -bottom-4 -right-4 text-[10rem] font-display font-black text-primary/[0.04] leading-none pointer-events-none select-none group-hover:scale-110 group-hover:text-primary/[0.07] transition-all duration-700">02</span>
+          <!-- Bottom gradient fade -->
+          <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-primary/[0.06] to-transparent pointer-events-none"></div>
+          <div class="relative z-10 pt-10 p-8 lg:p-10 lg:pt-14">
+            <div class="flex items-center gap-5 mb-6">
+              <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-light to-primary flex items-center justify-center text-cream text-3xl shrink-0 shadow-2xl shadow-primary/25 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 ring-2 ring-primary-light/20">
+                <i class="fas fa-eye"></i>
+              </div>
+              <div>
+                <h3 class="font-display text-3xl font-bold text-primary">Visión</h3>
+              </div>
+            </div>
+            <p class="text-base md:text-lg leading-relaxed text-gray-700">
+              Consolidarnos como la notaría de referencia en Guadalajara, reconocida por nuestra excelencia, innovación y compromiso con la justicia accesible para todos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Valores (rediseñado: 3x2 con descripciones) -->
+      <div class="reveal mt-20">
+        <h3 class="font-display text-2xl lg:text-3xl font-bold text-cream text-center mb-12">Nuestros Valores</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+          <div class="value-card glass-dark rounded-2xl p-7 text-center hover:-translate-y-2 transition-all duration-300 cursor-pointer backdrop-blur-md group">
+            <div class="value-icon-wrap-outline mx-auto mb-5 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <span class="block text-lg font-display font-bold text-cream mb-2">Integridad</span>
+            <p class="text-cream/65 text-sm leading-relaxed">Actuamos con honestidad y transparencia en cada acción notarial.</p>
+          </div>
+          <div class="value-card glass-dark rounded-2xl p-7 text-center hover:-translate-y-2 transition-all duration-300 cursor-pointer backdrop-blur-md group">
+            <div class="value-icon-wrap-outline mx-auto mb-5 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <span class="block text-lg font-display font-bold text-cream mb-2">Confianza</span>
+            <p class="text-cream/65 text-sm leading-relaxed">Construimos relaciones duraderas basadas en la certeza jurídica.</p>
+          </div>
+          <div class="value-card glass-dark rounded-2xl p-7 text-center hover:-translate-y-2 transition-all duration-300 cursor-pointer backdrop-blur-md group">
+            <div class="value-icon-wrap-outline mx-auto mb-5 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="block text-lg font-display font-bold text-cream mb-2">Excelencia</span>
+            <p class="text-cream/65 text-sm leading-relaxed">Buscamos la más alta calidad en cada servicio que ofrecemos.</p>
+          </div>
+          <div class="value-card glass-dark rounded-2xl p-7 text-center hover:-translate-y-2 transition-all duration-300 cursor-pointer backdrop-blur-md group">
+            <div class="value-icon-wrap-outline mx-auto mb-5 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
+              <i class="fas fa-users"></i>
+            </div>
+            <span class="block text-lg font-display font-bold text-cream mb-2">Servicio</span>
+            <p class="text-cream/65 text-sm leading-relaxed">Ponemos a las personas en el centro de nuestra labor notarial.</p>
+          </div>
+          <div class="value-card glass-dark rounded-2xl p-7 text-center hover:-translate-y-2 transition-all duration-300 cursor-pointer backdrop-blur-md group">
+            <div class="value-icon-wrap-outline mx-auto mb-5 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <span class="block text-lg font-display font-bold text-cream mb-2">Innovación</span>
+            <p class="text-cream/65 text-sm leading-relaxed">Incorporamos tecnología para hacer más ágil cada trámite.</p>
+          </div>
+          <div class="value-card glass-dark rounded-2xl p-7 text-center hover:-translate-y-2 transition-all duration-300 cursor-pointer backdrop-blur-md group">
+            <div class="value-icon-wrap-outline mx-auto mb-5 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <span class="block text-lg font-display font-bold text-cream mb-2">Justicia</span>
+            <p class="text-cream/65 text-sm leading-relaxed">Garantizamos imparcialidad y equidad en todos los actos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ── -->
+  <section class="py-24 lg:py-32 bg-gradient-to-b from-cream to-cream-dark relative overflow-hidden">
+    <!-- Decorative top line -->
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent"></div>
+
+    <!-- Floating decorative shapes -->
+    <div class="floating-shape floating-shape-3 opacity-30" style="top: 8%; left: 3%; width: 180px; height: 180px;"></div>
+    <div class="floating-shape floating-shape-3 opacity-20" style="bottom: 12%; right: 5%; width: 220px; height: 220px; animation-delay: 3s;"></div>
+
+    <!-- Subtle dot pattern overlay -->
+    <div class="absolute inset-0 opacity-[0.015] pointer-events-none" style="background-image: radial-gradient(var(--color-primary) 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+      <div class="text-center mb-14 lg:mb-16 reveal">
+        <span class="text-primary-light text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">Testimonios</span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-primary mb-4">
+          Lo que dicen <span class="text-primary-light font-light italic">nuestros clientes</span>
+        </h2>
+        <p class="text-gray-500 text-sm sm:text-base max-w-lg mx-auto leading-relaxed mt-3">
+          La satisfacción de nuestros clientes es nuestro mejor aval.
+        </p>
+      </div>
+
+      <!-- ── GOOGLE RATING SUMMARY ── -->
+      <div class="flex justify-center mb-10 sm:mb-12 reveal">
+        <div class="inline-flex items-center gap-4 bg-white/90 rounded-2xl px-6 py-3.5 shadow-lg border border-primary/5 hover:shadow-xl hover:border-primary/10 transition-all duration-300">
+          <div class="flex items-center gap-0.5">
+            <i class="fas fa-star text-amber-400 text-lg sm:text-xl"></i>
+            <i class="fas fa-star text-amber-400 text-lg sm:text-xl"></i>
+            <i class="fas fa-star text-amber-400 text-lg sm:text-xl"></i>
+            <i class="fas fa-star text-amber-400 text-lg sm:text-xl"></i>
+            <i class="fas fa-star text-amber-400 text-lg sm:text-xl"></i>
+          </div>
+          <span class="text-2xl sm:text-3xl font-bold text-primary font-display">4.8</span>
+          <div class="w-px h-8 bg-gray-200"></div>
+          <div class="text-left">
+            <span class="text-xs sm:text-sm font-semibold text-gray-700 block leading-tight">Google</span>
+            <span class="text-xs text-gray-400 block leading-tight">66 reseñas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── MURO DE CONFIANZA: Featured card + 3x3 grid ── -->
+      <div class="max-w-5xl mx-auto stagger-children">
+
+        <!-- ═══ FEATURED CARD ═══ (Ana Tamez) -->
+        <div class="testimonial-featured mb-6 reveal testimonial-trigger" role="button" tabindex="0">
+          <div class="testimonial-featured-accent"></div>
+          <div class="testimonial-featured-quote-mark" aria-hidden="true">"</div>
+          <div class="testimonial-featured-content">
+            <div class="flex gap-1 mb-4">
+              <i class="fas fa-star text-amber-400 text-sm"></i>
+              <i class="fas fa-star text-amber-400 text-sm"></i>
+              <i class="fas fa-star text-amber-400 text-sm"></i>
+              <i class="fas fa-star text-amber-400 text-sm"></i>
+              <i class="fas fa-star text-amber-400 text-sm"></i>
+            </div>
+            <p class="text-base md:text-lg leading-relaxed text-gray-700 mb-5 italic">
+              "Tuve una experiencia excelente. Desde el primer momento, el personal fue muy amable, profesional y atento a cada detalle. Me brindaron asesoría clara y precisa, resolviendo todas mis dudas con paciencia y conocimiento. La atención fue rápida, eficiente y transparente en todo el proceso."
+            </p>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex-1 h-px bg-gradient-to-r from-primary/20 via-primary/10 to-transparent"></span>
+            </div>
+            <div class="flex items-center gap-3 sm:gap-4">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-cream text-base sm:text-lg font-bold shadow-lg shrink-0">
+                A
+              </div>
+              <div class="min-w-0">
+                <h4 class="font-display font-semibold text-primary text-sm sm:text-base md:text-lg">Ana Tamez</h4>
+                <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                  <span class="text-xs sm:text-sm text-gray-400">Google</span>
+                  <span class="w-1 h-1 rounded-full bg-gray-300 shrink-0"></span>
+                  <i class="fas fa-check-circle text-emerald-500 text-xs shrink-0"></i>
+                  <span class="text-xs text-emerald-600 font-medium">
+                    <a href="https://www.google.com/search?q=notar%C3%ADa+80+gdl&oq=notar%C3%ADa+80+gdl&sourceid=chrome&ie=UTF-8&sei=lQcaaujYD_jOp84PwOfNgQo#lrd=0x8428ae2679dfae35:0x33004c352e9cb36b,1,,,," target="_blank" class="hover:text-emerald-700 transition-colors">Verificada</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ GRID 3x3 ═══ -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+
+          <!-- Card 1: Adrián B. -->
+          <div class="testimonial-card-item testimonial-trigger" role="button" tabindex="0">
+            <div class="flex gap-1 mb-3">
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+            </div>
+            <p class="text-xs sm:text-sm leading-relaxed text-gray-600 mb-3 italic line-clamp-4">
+              "Fui para certificar mi cédula y la verdad me sorprendió lo rápido que me atendieron desde que llegué. El personal fue muy amable y me explicaron todo con paciencia. El trámite fue súper ágil..."
+            </p>
+            <div class="mt-auto flex items-center gap-2.5 pt-3 border-t border-primary/5">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-cream text-xs font-bold shrink-0">A</div>
+              <div class="min-w-0">
+                <h4 class="font-display font-semibold text-primary text-xs sm:text-sm truncate">Adrián B.</h4>
+                <span class="text-[10px] text-gray-400">Local Guide</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Osiris Yajaira León Robles -->
+          <div class="testimonial-card-item testimonial-trigger" role="button" tabindex="0">
+            <div class="flex gap-1 mb-3">
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+            </div>
+            <p class="text-xs sm:text-sm leading-relaxed text-gray-600 mb-3 italic line-clamp-4">
+              "Excelente servicio, me atendió el Lic. Miguel Magaña de la notaría núm. 80, muy profesional en su trabajo, siempre transparente y sin errores... Gracias a él tengo las escrituras de mi casa."
+            </p>
+            <div class="mt-auto flex items-center gap-2.5 pt-3 border-t border-primary/5">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-cream text-xs font-bold shrink-0">O</div>
+              <div class="min-w-0">
+                <h4 class="font-display font-semibold text-primary text-xs sm:text-sm truncate">Osiris Y. León Robles</h4>
+                <span class="text-[10px] text-gray-400">Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Ana Bertha Jiménez -->
+          <div class="testimonial-card-item testimonial-trigger" role="button" tabindex="0">
+            <div class="flex gap-1 mb-3">
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+            </div>
+            <p class="text-xs sm:text-sm leading-relaxed text-gray-600 mb-3 italic line-clamp-4">
+              "En La Notaría 80, el personal son muy profesionales, muy capacitado en su ramo. Fui atendida por el Lic. Miguel Magaña y todo el trámite fue muy fácil de entenderlo, ya que el Lic. cuenta con el conocimiento y amabilidad..."
+            </p>
+            <div class="mt-auto flex items-center gap-2.5 pt-3 border-t border-primary/5">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-cream text-xs font-bold shrink-0">A</div>
+              <div class="min-w-0">
+                <h4 class="font-display font-semibold text-primary text-xs sm:text-sm truncate">Ana Bertha Jiménez</h4>
+                <span class="text-[10px] text-gray-400">Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Moisés Alonso -->
+          <div class="testimonial-card-item testimonial-trigger" role="button" tabindex="0">
+            <div class="flex gap-1 mb-3">
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+            </div>
+            <p class="text-xs sm:text-sm leading-relaxed text-gray-600 mb-3 italic line-clamp-4">
+              "De las notarías más comprometidas con los clientes. Los abogados son muy profesionales, comprometidos y respetuosos. Además, sus servicios son muy ágiles y eficientes. En cuanto a los costos, son muy accesibles."
+            </p>
+            <div class="mt-auto flex items-center gap-2.5 pt-3 border-t border-primary/5">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-cream text-xs font-bold shrink-0">M</div>
+              <div class="min-w-0">
+                <h4 class="font-display font-semibold text-primary text-xs sm:text-sm truncate">Moisés Alonso</h4>
+                <span class="text-[10px] text-gray-400">Local Guide</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Hildeberto Peñaloza Muñoz -->
+          <div class="testimonial-card-item testimonial-trigger" role="button" tabindex="0">
+            <div class="flex gap-1 mb-3">
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+            </div>
+            <p class="text-xs sm:text-sm leading-relaxed text-gray-600 mb-3 italic line-clamp-4">
+              "Es una Notaría Pública que se distingue por su calidad profesional y calidez humana de quienes en ella laboran, hacia quien acude a solicitar la elaboración de escrituras, certificaciones... Completamente satisfecho."
+            </p>
+            <div class="mt-auto flex items-center gap-2.5 pt-3 border-t border-primary/5">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-cream text-xs font-bold shrink-0">H</div>
+              <div class="min-w-0">
+                <h4 class="font-display font-semibold text-primary text-xs sm:text-sm truncate">Hildeberto Peñaloza M.</h4>
+                <span class="text-[10px] text-gray-400">Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Natalia Osua -->
+          <div class="testimonial-card-item testimonial-trigger" role="button" tabindex="0">
+            <div class="flex gap-1 mb-3">
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+            </div>
+            <p class="text-xs sm:text-sm leading-relaxed text-gray-600 mb-3 italic line-clamp-4">
+              "Son muy amables, y resolvieron todas mis dudas de la mejor manera. Muchas felicidades a todo el equipo por eso, siempre es un gusto ir a hacer mis trámites con ustedes."
+            </p>
+            <div class="mt-auto flex items-center gap-2.5 pt-3 border-t border-primary/5">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-cream text-xs font-bold shrink-0">N</div>
+              <div class="min-w-0">
+                <h4 class="font-display font-semibold text-primary text-xs sm:text-sm truncate">Natalia Osua</h4>
+                <span class="text-[10px] text-gray-400">Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: Miriam Campos Sánchez -->
+          <div class="testimonial-card-item testimonial-trigger" role="button" tabindex="0">
+            <div class="flex gap-1 mb-3">
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+            </div>
+            <p class="text-xs sm:text-sm leading-relaxed text-gray-600 mb-3 italic line-clamp-4">
+              "Excelente personal altamente capacitado, son muy serviciales y amables. Sin duda alguna, siempre que necesito algún trámite, acudo a ellos."
+            </p>
+            <div class="mt-auto flex items-center gap-2.5 pt-3 border-t border-primary/5">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-cream text-xs font-bold shrink-0">M</div>
+              <div class="min-w-0">
+                <h4 class="font-display font-semibold text-primary text-xs sm:text-sm truncate">Miriam Campos Sánchez</h4>
+                <span class="text-[10px] text-gray-400">Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8: Josué Francisco Galaviz Hernández -->
+          <div class="testimonial-card-item testimonial-trigger" role="button" tabindex="0">
+            <div class="flex gap-1 mb-3">
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+            </div>
+            <p class="text-xs sm:text-sm leading-relaxed text-gray-600 mb-3 italic line-clamp-4">
+              "Excelente atención al cliente, me atendieron de manera respetuosa y muy amable. El lugar es muy limpio y seguro."
+            </p>
+            <div class="mt-auto flex items-center gap-2.5 pt-3 border-t border-primary/5">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-cream text-xs font-bold shrink-0">J</div>
+              <div class="min-w-0">
+                <h4 class="font-display font-semibold text-primary text-xs sm:text-sm truncate">Josué F. Galaviz H.</h4>
+                <span class="text-[10px] text-gray-400">Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9: Isabel Zaragoza -->
+          <div class="testimonial-card-item testimonial-trigger" role="button" tabindex="0">
+            <div class="flex gap-1 mb-3">
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+              <i class="fas fa-star text-amber-400 text-xs"></i>
+            </div>
+            <p class="text-xs sm:text-sm leading-relaxed text-gray-600 mb-3 italic line-clamp-4">
+              "Excelente servicio, asesoría y atención de la Lic. Enriqueta y su personal, además buenos precios."
+            </p>
+            <div class="mt-auto flex items-center gap-2.5 pt-3 border-t border-primary/5">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-cream text-xs font-bold shrink-0">I</div>
+              <div class="min-w-0">
+                <h4 class="font-display font-semibold text-primary text-xs sm:text-sm truncate">Isabel Zaragoza</h4>
+                <span class="text-[10px] text-gray-400">Google</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ── CTA: Ver todas en Google ── -->
+        <div class="text-center mt-10 sm:mt-12 reveal">
+          <a href="https://www.google.com/search?q=notar%C3%ADa+80+gdl&oq=notar%C3%ADa+80+gdl&sourceid=chrome&ie=UTF-8&sei=lQcaaujYD_jOp84PwOfNgQo#lrd=0x8428ae2679dfae35:0x33004c352e9cb36b,1,,,," target="_blank" class="btn-secondary inline-flex items-center gap-2.5 px-6 sm:px-8 py-3 sm:py-3.5 rounded-2xl text-sm sm:text-base shadow-lg group">
+            <i class="fab fa-google text-lg"></i>
+            Ver todas las <strong>66 reseñas</strong> en Google
+            <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CLIENTES ── -->
+  <section class="py-24 lg:py-28 bg-gradient-to-br from-primary via-primary-dark to-primary relative overflow-hidden" id="clientesSection">
+    <div class="hero-pattern opacity-30"></div>
+    <div class="floating-shape floating-shape-3" style="top: 15%; left: 5%;"></div>
+    
+    <!-- Title within max-w-7xl -->
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+      <div class="text-center mb-14 reveal">
+        <span class="text-primary-light text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">Instituciones que confían</span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-cream">Nuestros Clientes</h2>
+        <p class="text-cream/60 text-sm sm:text-base max-w-lg mx-auto leading-relaxed mt-3">Desliza o navega para conocer las instituciones que confían en nosotros.</p>
+      </div>
+    </div>
+
+    <!-- ══ CARRUSEL DE CLIENTES ══ -->
+    <div class="clients-carousel relative z-10" id="clientsCarousel">
+      <!-- Flecha izquierda -->
+      <button class="carousel-arrow carousel-arrow-left" id="carouselPrev" aria-label="Anterior cliente">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <!-- Viewport (máscara de overflow) -->
+      <div class="clients-carousel-viewport">
+        <div class="clients-carousel-track" id="carouselTrack">
+          <div class="client-card" data-client="Infonavit" data-index="0">
+            <img src="/assets/images/Logo_INFONAVIT.svg" alt="Infonavit" class="client-logo" onerror="imgFallback(this)">
+            <span class="client-name">Infonavit</span>
+          </div>
+          <div class="client-card" data-client="FOVISSSTE" data-index="1">
+            <img src="/assets/images/FOVISSTE.svg" alt="FOVISSSTE" class="client-logo" onerror="imgFallback(this)">
+            <span class="client-name">FOVISSSTE</span>
+          </div>
+          <div class="client-card" data-client="IPEJAL" data-index="2">
+            <img src="/assets/images/IPEJAL.png" alt="IPEJAL" class="client-logo" onerror="imgFallback(this)">
+            <span class="client-name">IPEJAL</span>
+          </div>
+          <div class="client-card" data-client="ISSFAM" data-index="3">
+            <img src="/assets/images/issfam-seeklogo.png" alt="ISSFAM" class="client-logo" onerror="imgFallback(this)">
+            <span class="client-name">ISSFAM</span>
+          </div>
+          <div class="client-card" data-client="BIM" data-index="4">
+            <img src="/assets/images/BIM%20BANCO%20INMOBILIARIO%20MEXICANO.png" alt="BIM" class="client-logo" onerror="imgFallback(this)">
+            <span class="client-name">BIM</span>
+          </div>
+          <div class="client-card" data-client="DBA System" data-index="5">
+            <img src="/assets/images/DBA%20SYSTEM.png" alt="DBA System" class="client-logo" onerror="imgFallback(this)">
+            <span class="client-name">DBA System</span>
+          </div>
+          <div class="client-card" data-client="Óptimo Futuro" data-index="6">
+            <img src="/assets/images/OPTIMO%20FUTURO.webp" alt="Óptimo Futuro" class="client-logo" onerror="imgFallback(this)">
+            <span class="client-name">Óptimo Futuro</span>
+          </div>
+          <div class="client-card" data-client="Hogares SM" data-index="7">
+            <img src="/assets/images/11488_Hogares-SM_logotipo-2023-A-circulo-300x300.png.webp" alt="Hogares SM" class="client-logo" onerror="imgFallback(this)">
+            <span class="client-name">Hogares SM</span>
+          </div>
+          <div class="client-card" data-client="Casa Administraciones" data-index="8">
+            <img src="/assets/images/casa%20administraciones%20png%20transparente.png" alt="Casa Administraciones" class="client-logo" onerror="imgFallback(this)">
+            <span class="client-name">Casa Administraciones</span>
+          </div>
+          <div class="client-card" data-client="ION Financiera" data-index="9">
+            <img src="/assets/images/LOGO%20ION%20TRANSPARENTE.png" alt="ION Financiera" class="client-logo" onerror="imgFallback(this)">
+            <span class="client-name">ION Financiera</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flecha derecha -->
+      <button class="carousel-arrow carousel-arrow-right" id="carouselNext" aria-label="Siguiente cliente">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- Dots indicadores -->
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+
+    <!-- ══ DRAWER — SPOTHUB DE CLIENTES ══ -->
+    <div class="spothub-overlay" id="spothubOverlay"></div>
+    <div class="spothub-drawer" id="spothubDrawer">
+      <button class="spothub-close" id="spothubClose" aria-label="Cerrar">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="spothub-content" id="spothubContent">
+        <div class="spothub-logo-wrap spothub-stagger-0">
+          <img id="spothubLogo" src="" alt="" class="spothub-logo">
+        </div>
+        <h3 class="spothub-title spothub-stagger-1" id="spothubTitle"></h3>
+        <p class="spothub-desc spothub-stagger-2" id="spothubDesc"></p>
+        <!-- Tags contextuales -->
+        <div class="spothub-tags spothub-stagger-3" id="spothubTags"></div>
+        <a id="spothubLink" href="#" target="_blank" rel="noopener noreferrer" class="spothub-link spothub-stagger-4">
+          <i class="fas fa-external-link-alt"></i>
+          Visitar sitio web
+        </a>
+        <!-- Navegación entre clientes debajo del link -->
+        <div class="spothub-nav spothub-stagger-5">
+          <button class="spothub-nav-btn" id="spothubNavPrev" aria-label="Anterior">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <span class="spothub-counter" id="spothubCounter"></span>
+          <button class="spothub-nav-btn" id="spothubNavNext" aria-label="Siguiente">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── TESTIMONIAL MODAL ── -->
+  <div class="testimonial-modal" id="testimonialModal">
+    <div class="testimonial-modal-overlay" id="testimonialModalOverlay"></div>
+    <div class="testimonial-modal-container">
+      <!-- Close button -->
+      <button class="testimonial-modal-btn testimonial-modal-close" id="testimonialModalClose" aria-label="Cerrar">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <!-- Navigation arrows -->
+      <button class="testimonial-modal-btn testimonial-modal-prev" id="testimonialModalPrev" aria-label="Anterior testimonio">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="testimonial-modal-btn testimonial-modal-next" id="testimonialModalNext" aria-label="Siguiente testimonio">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- Content -->
+      <div class="testimonial-modal-content" id="testimonialModalContent">
+        <!-- Stars -->
+        <div class="testimonial-modal-stars" id="testimonialModalStars">
+          <i class="fas fa-star text-amber-400 text-lg"></i>
+          <i class="fas fa-star text-amber-400 text-lg"></i>
+          <i class="fas fa-star text-amber-400 text-lg"></i>
+          <i class="fas fa-star text-amber-400 text-lg"></i>
+          <i class="fas fa-star text-amber-400 text-lg"></i>
+        </div>
+        <!-- Quote -->
+        <div class="testimonial-modal-quote" id="testimonialModalQuote"></div>
+        <!-- Divider -->
+        <div class="testimonial-modal-divider"></div>
+        <!-- Author -->
+        <div class="testimonial-modal-author" id="testimonialModalAuthor">
+          <div class="testimonial-modal-avatar" id="testimonialModalAvatar"></div>
+          <div>
+            <h4 class="testimonial-modal-name" id="testimonialModalName"></h4>
+            <div class="testimonial-modal-meta">
+              <span class="testimonial-modal-source" id="testimonialModalSource"></span>
+              <span class="w-1 h-1 rounded-full bg-gray-300 shrink-0"></span>
+              <i class="fas fa-check-circle text-emerald-500 text-xs shrink-0"></i>
+              <span class="testimonial-modal-verified">Verificada</span>
+            </div>
+          </div>
+        </div>
+        <!-- Google link -->
+        <div class="testimonial-modal-footer" id="testimonialModalFooter">
+          <a id="testimonialModalLink" href="#" target="_blank" class="testimonial-modal-google-link">
+            <i class="fab fa-google"></i>
+            Ver en Google
+          </a>
+        </div>
+        <!-- Counter -->
+        <div class="testimonial-modal-counter" id="testimonialModalCounter">1 / 10</div>
+      </div>
+    </div>
+  </div>
+
+</BaseLayout>

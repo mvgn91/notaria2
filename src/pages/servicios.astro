@@ -1,0 +1,292 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+---
+
+<BaseLayout currentPath="/servicios">
+  <section class="hero-section relative min-h-[55vh] lg:min-h-[75vh] flex items-center bg-gradient-to-br from-primary-dark via-primary to-primary-dark overflow-hidden">
+    <div class="hero-bg-image hero-bg-visible" style="background-image: url('https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg?auto=compress&cs=tinysrgb&w=1920')"></div>
+    <div class="hero-pattern"></div>
+    <div class="floating-shape floating-shape-1"></div>
+    <div class="floating-shape floating-shape-2"></div>
+
+    <!-- Logo watermark decorativo -->
+    <div class="absolute right-0 top-1/2 -translate-y-1/2 z-[1] w-[28vw] h-[28vw] max-w-[400px] max-h-[400px] pointer-events-none select-none hidden lg:flex items-center justify-center opacity-[0.06]">
+      <img src="/logo%20notaria%2080%20verde.png" alt="" class="w-full h-full object-contain" aria-hidden="true">
+    </div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+      <div class="max-w-3xl lg:max-w-4xl">
+        <div class="reveal mb-8">
+          <span class="inline-flex items-center gap-2.5 glass rounded-full px-5 py-2 text-cream text-sm lg:text-base font-medium tracking-[0.15em] uppercase">
+            <i class="fas fa-gavel text-cream/70 text-xs"></i>
+            Soluciones Integrales
+          </span>
+        </div>
+
+        <h1 class="font-display text-cream reveal" style="transition-delay: 0.1s;">
+          <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] 2xl:text-9xl font-bold leading-[1.04] tracking-tight drop-shadow-xl">
+            Servicios
+          </span>
+          <span class="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[3.75rem] 2xl:text-6xl font-light italic mt-2 text-cream/85 drop-shadow-lg">
+            notariales especializados
+          </span>
+        </h1>
+
+        <div class="flex items-center gap-4 my-8 reveal" style="transition-delay: 0.15s;">
+          <span class="block w-12 h-px bg-cream/20"></span>
+          <span class="block w-1.5 h-1.5 rounded-full bg-primary-light/50"></span>
+          <span class="block flex-1 h-px bg-cream/10"></span>
+        </div>
+
+        <p class="text-base sm:text-lg lg:text-xl text-cream/55 max-w-xl lg:max-w-2xl leading-relaxed reveal" style="transition-delay: 0.2s;">
+          Ofrecemos una amplia gama de servicios notariales diseñados para brindar seguridad jurídica en cada uno de sus trámites, con atención personalizada y resultados confiables.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INTRO — Credencial Editorial ── -->
+  <section class="py-20 lg:py-24 bg-cream relative overflow-hidden">
+    <!-- Sutil ornamento decorativo superior -->
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-3xl lg:max-w-5xl mx-auto">
+        <!-- Header centrado -->
+        <div class="text-center mb-14 lg:mb-16 reveal">
+          <span class="inline-flex items-center gap-3 px-4 py-2 bg-primary/5 rounded-full text-primary text-xs lg:text-sm font-semibold tracking-[0.15em] uppercase mb-5">
+            <i class="fas fa-shield-alt text-primary-light"></i>
+            Confianza y Profesionalismo
+          </span>
+          <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight mb-5">
+            Seguridad jurídica<br>
+            <span class="text-primary-light font-light italic">en cada servicio</span>
+          </h2>
+          <p class="text-gray-500 max-w-xl lg:max-w-2xl mx-auto text-base lg:text-lg leading-relaxed">
+            En la <strong class="text-primary">Notaría Pública #80</strong> ofrecemos una amplia gama de servicios notariales diseñados para brindar <strong class="text-primary-light">seguridad jurídica</strong> en cada uno de sus trámites. Nuestro equipo de profesionales altamente capacitados le garantiza atención personalizada y resultados confiables.
+          </p>
+        </div>
+
+        <!-- Service Showcase — compacto, puro CSS, clickeable -->
+        <div class="relative bg-white rounded-2xl border border-primary/[0.06] shadow-sm p-5 sm:p-6 lg:p-9 xl:p-10 reveal" style="transition-delay: 0.1s;">
+          <!-- Número grande decorativo -->
+          <div class="flex items-center justify-center gap-3 mb-4 lg:mb-6">
+            <span class="font-display text-5xl lg:text-7xl font-bold text-primary leading-none">06</span>
+            <div class="h-10 lg:h-14 w-px bg-primary/[0.08]"></div>
+            <div class="text-left">
+              <span class="text-[0.55rem] lg:text-xs text-primary-light font-semibold tracking-[0.2em] uppercase block leading-relaxed">Cobertura integral</span>
+              <span class="font-display text-base lg:text-xl font-bold text-primary leading-tight block">Servicios Especializados</span>
+            </div>
+          </div>
+
+          <!-- Pills de servicios — 3×2 responsive -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 lg:gap-3">
+            <a href="#servicio-traslativos" class="service-pill group relative overflow-hidden px-3.5 py-2.5 lg:px-5 lg:py-3 rounded-xl bg-primary/[0.04] border border-primary/[0.06] hover:bg-primary hover:border-primary-light hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center">
+              <span class="relative z-10 text-[0.65rem] lg:text-sm font-semibold text-primary group-hover:text-cream transition-colors duration-300 tracking-wide">Compraventa</span>
+            </a>
+            <a href="#servicio-sucesiones" class="service-pill group relative overflow-hidden px-3.5 py-2.5 lg:px-5 lg:py-3 rounded-xl bg-primary/[0.04] border border-primary/[0.06] hover:bg-primary hover:border-primary-light hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center">
+              <span class="relative z-10 text-[0.65rem] lg:text-sm font-semibold text-primary group-hover:text-cream transition-colors duration-300 tracking-wide">Testamentos</span>
+            </a>
+            <a href="#servicio-corporativo" class="service-pill group relative overflow-hidden px-3.5 py-2.5 lg:px-5 lg:py-3 rounded-xl bg-primary/[0.04] border border-primary/[0.06] hover:bg-primary hover:border-primary-light hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center">
+              <span class="relative z-10 text-[0.65rem] lg:text-sm font-semibold text-primary group-hover:text-cream transition-colors duration-300 tracking-wide">Corporativo</span>
+            </a>
+            <a href="#servicio-poderes" class="service-pill group relative overflow-hidden px-3.5 py-2.5 lg:px-5 lg:py-3 rounded-xl bg-primary/[0.04] border border-primary/[0.06] hover:bg-primary hover:border-primary-light hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center">
+              <span class="relative z-10 text-[0.65rem] lg:text-sm font-semibold text-primary group-hover:text-cream transition-colors duration-300 tracking-wide">Poderes</span>
+            </a>
+            <a href="#servicio-certificaciones" class="service-pill group relative overflow-hidden px-3.5 py-2.5 lg:px-5 lg:py-3 rounded-xl bg-primary/[0.04] border border-primary/[0.06] hover:bg-primary hover:border-primary-light hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center">
+              <span class="relative z-10 text-[0.65rem] lg:text-sm font-semibold text-primary group-hover:text-cream transition-colors duration-300 tracking-wide">Certificaciones</span>
+            </a>
+            <a href="#servicio-asesoria" class="service-pill group relative overflow-hidden px-3.5 py-2.5 lg:px-5 lg:py-3 rounded-xl bg-primary/[0.04] border border-primary/[0.06] hover:bg-primary hover:border-primary-light hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center">
+              <span class="relative z-10 text-[0.65rem] lg:text-sm font-semibold text-primary group-hover:text-cream transition-colors duration-300 tracking-wide">Asesoría Legal</span>
+            </a>
+          </div>
+
+          <!-- CTA sutíl -->
+          <div class="text-center mt-3 lg:mt-5">
+            <a href="#servicios-grid" class="inline-flex items-center gap-1 text-[0.55rem] lg:text-xs font-semibold text-primary-light/50 hover:text-primary transition-colors duration-300 tracking-wider uppercase">
+              Ver detalle completo
+              <i class="fas fa-arrow-right text-[7px] lg:text-[9px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICIOS GRID ── -->
+  <section id="servicios-grid" class="py-20 lg:py-28 bg-gradient-to-b from-cream/40 to-cream-dark relative overflow-hidden">
+    <!-- Decorative top gradient line -->
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16 lg:mb-20 reveal">
+        <span class="text-primary-light text-sm lg:text-base font-semibold tracking-[0.2em] uppercase mb-4 block">Nuestra Experiencia</span>
+        <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
+          Soluciones notariales<br>
+          <span class="text-primary-light font-light italic">integrales</span>
+        </h2>
+        <p class="text-gray-500 text-sm sm:text-base lg:text-lg max-w-lg lg:max-w-xl mx-auto leading-relaxed mt-6">
+          Cada servicio está respaldado por años de experiencia y un profundo conocimiento del marco legal mexicano.
+        </p>
+      </div>
+
+      <!-- Grid 2-columnas — tarjetas verdes oscuro con texto crema -->
+      <div class="grid md:grid-cols-2 gap-6 lg:gap-8 xl:gap-10 stagger-children max-w-6xl lg:max-w-7xl mx-auto">
+
+        <!-- ════ 1. Traslativos de Dominio ════ -->
+        <div id="servicio-traslativos" class="group relative bg-primary-dark rounded-3xl p-7 lg:p-9 shadow-md border border-cream/[0.08] hover:shadow-xl hover:border-cream/[0.18] transition-all duration-500 scroll-mt-24">
+          <!-- Accent line top -->
+          <div class="absolute top-0 left-8 right-8 h-0.5 bg-gradient-to-r from-cream/0 via-cream/15 to-cream/0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="flex flex-col gap-5">
+            <div class="flex items-center gap-4">
+              <span class="font-display text-5xl font-black text-cream/[0.06] leading-none select-none">01</span>
+              <div class="w-13 h-13 rounded-2xl bg-gradient-to-br from-cream to-cream-dark flex items-center justify-center text-primary text-xl shadow-lg group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 ring-2 ring-cream/[0.08] group-hover:ring-cream/20 shrink-0" style="width:3.25rem;height:3.25rem;">
+                <i class="fas fa-home"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-display text-xl lg:text-2xl font-bold text-cream mb-3 group-hover:text-cream/90 transition-colors duration-500">Traslativos de Dominio</h3>
+              <p class="text-cream/55 text-sm lg:text-base leading-relaxed mb-5">
+                Escrituración de propiedades con total seguridad jurídica y transparencia en el proceso. Garantizamos la validez legal de cada transacción inmobiliaria.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Compraventa</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Donación</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Fideicomisos</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Dación en pago</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Adjudicaciones</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════ 2. Sucesiones ════ -->
+        <div id="servicio-sucesiones" class="group relative bg-primary-dark rounded-3xl p-7 lg:p-9 shadow-md border border-cream/[0.08] hover:shadow-xl hover:border-cream/[0.18] transition-all duration-500 scroll-mt-24">
+          <div class="absolute top-0 left-8 right-8 h-0.5 bg-gradient-to-r from-cream/0 via-cream/15 to-cream/0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="flex flex-col gap-5">
+            <div class="flex items-center gap-4">
+              <span class="font-display text-5xl font-black text-cream/[0.06] leading-none select-none">02</span>
+              <div class="w-13 h-13 rounded-2xl bg-gradient-to-br from-cream to-cream-dark flex items-center justify-center text-primary text-xl shadow-lg group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 ring-2 ring-cream/[0.08] group-hover:ring-cream/20 shrink-0" style="width:3.25rem;height:3.25rem;">
+                <i class="fas fa-scroll"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-display text-xl lg:text-2xl font-bold text-cream mb-3 group-hover:text-cream/90 transition-colors duration-500">Sucesiones</h3>
+              <p class="text-cream/55 text-sm lg:text-base leading-relaxed mb-5">
+                Elaboración de testamentos públicos abiertos para proteger el patrimonio familiar. Asesoría especializada en sucesiones y herencias.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Testamentos</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Sucesión Testamentaria</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Intestamentaria</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════ 3. Corporativo ════ -->
+        <div id="servicio-corporativo" class="group relative bg-primary-dark rounded-3xl p-7 lg:p-9 shadow-md border border-cream/[0.08] hover:shadow-xl hover:border-cream/[0.18] transition-all duration-500 scroll-mt-24">
+          <div class="absolute top-0 left-8 right-8 h-0.5 bg-gradient-to-r from-cream/0 via-cream/15 to-cream/0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="flex flex-col gap-5">
+            <div class="flex items-center gap-4">
+              <span class="font-display text-5xl font-black text-cream/[0.06] leading-none select-none">03</span>
+              <div class="w-13 h-13 rounded-2xl bg-gradient-to-br from-cream to-cream-dark flex items-center justify-center text-primary text-xl shadow-lg group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 ring-2 ring-cream/[0.08] group-hover:ring-cream/20 shrink-0" style="width:3.25rem;height:3.25rem;">
+                <i class="fas fa-building"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-display text-xl lg:text-2xl font-bold text-cream mb-3 group-hover:text-cream/90 transition-colors duration-500">Corporativo</h3>
+              <p class="text-cream/55 text-sm lg:text-base leading-relaxed mb-5">
+                Formalización de empresas y sociedades mercantiles con asesoría especializada. Desde microempresas hasta grandes corporaciones.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Constitución</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Actas de asamblea</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Protocolizaciones</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Poderes</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Fusión/Escisión</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Liquidación</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════ 4. Poderes Notariales ════ -->
+        <div id="servicio-poderes" class="group relative bg-primary-dark rounded-3xl p-7 lg:p-9 shadow-md border border-cream/[0.08] hover:shadow-xl hover:border-cream/[0.18] transition-all duration-500 scroll-mt-24">
+          <div class="absolute top-0 left-8 right-8 h-0.5 bg-gradient-to-r from-cream/0 via-cream/15 to-cream/0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="flex flex-col gap-5">
+            <div class="flex items-center gap-4">
+              <span class="font-display text-5xl font-black text-cream/[0.06] leading-none select-none">04</span>
+              <div class="w-13 h-13 rounded-2xl bg-gradient-to-br from-cream to-cream-dark flex items-center justify-center text-primary text-xl shadow-lg group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 ring-2 ring-cream/[0.08] group-hover:ring-cream/20 shrink-0" style="width:3.25rem;height:3.25rem;">
+                <i class="fas fa-handshake"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-display text-xl lg:text-2xl font-bold text-cream mb-3 group-hover:text-cream/90 transition-colors duration-500">Poderes Notariales</h3>
+              <p class="text-cream/55 text-sm lg:text-base leading-relaxed mb-5">
+                Otorgamiento de poderes generales y especiales para representación legal. Documentos con validez nacional e internacional.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Poderes generales</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Poderes especiales</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Revocaciones</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════ 5. Certificaciones ════ -->
+        <div id="servicio-certificaciones" class="group relative bg-primary-dark rounded-3xl p-7 lg:p-9 shadow-md border border-cream/[0.08] hover:shadow-xl hover:border-cream/[0.18] transition-all duration-500 scroll-mt-24">
+          <div class="absolute top-0 left-8 right-8 h-0.5 bg-gradient-to-r from-cream/0 via-cream/15 to-cream/0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="flex flex-col gap-5">
+            <div class="flex items-center gap-4">
+              <span class="font-display text-5xl font-black text-cream/[0.06] leading-none select-none">05</span>
+              <div class="w-13 h-13 rounded-2xl bg-gradient-to-br from-cream to-cream-dark flex items-center justify-center text-primary text-xl shadow-lg group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 ring-2 ring-cream/[0.08] group-hover:ring-cream/20 shrink-0" style="width:3.25rem;height:3.25rem;">
+                <i class="fas fa-certificate"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-display text-xl lg:text-2xl font-bold text-cream mb-3 group-hover:text-cream/90 transition-colors duration-500">Certificaciones</h3>
+              <p class="text-cream/55 text-sm lg:text-base leading-relaxed mb-5">
+                Certificación de documentos y firmas con validez legal completa. Autenticación de copias y traducciones oficiales.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Firmas</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Copias</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Hechos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════ 6. Asesoría Legal ════ -->
+        <div id="servicio-asesoria" class="group relative bg-primary-dark rounded-3xl p-7 lg:p-9 shadow-md border border-cream/[0.08] hover:shadow-xl hover:border-cream/[0.18] transition-all duration-500 scroll-mt-24">
+          <div class="absolute top-0 left-8 right-8 h-0.5 bg-gradient-to-r from-cream/0 via-cream/15 to-cream/0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="flex flex-col gap-5">
+            <div class="flex items-center gap-4">
+              <span class="font-display text-5xl font-black text-cream/[0.06] leading-none select-none">06</span>
+              <div class="w-13 h-13 rounded-2xl bg-gradient-to-br from-cream to-cream-dark flex items-center justify-center text-primary text-xl shadow-lg group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 ring-2 ring-cream/[0.08] group-hover:ring-cream/20 shrink-0" style="width:3.25rem;height:3.25rem;">
+                <i class="fas fa-balance-scale"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-display text-xl lg:text-2xl font-bold text-cream mb-3 group-hover:text-cream/90 transition-colors duration-500">Asesoría Legal</h3>
+              <p class="text-cream/55 text-sm lg:text-base leading-relaxed mb-5">
+                Consultoría especializada en derecho notarial y civil para particulares y empresas. Orientación integral en trámites legales.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Consultoría notarial</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Derecho civil</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Derecho mercantil</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-cream/[0.07] text-cream/70 text-xs font-medium border border-cream/[0.08] hover:bg-cream/[0.12] hover:border-cream/15 transition-all">Corporativo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+</BaseLayout>

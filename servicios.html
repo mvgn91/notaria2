@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios Notariales - Notaría Pública #80 | Compraventa, Testamentos, Certificaciones</title>
+  <meta name="description" content="Servicios notariales especializados de la Notaría Pública #80. Compraventa de inmuebles, testamentos, constitución de sociedades, certificaciones y más.">
+  <meta name="keywords" content="servicios notariales, compraventa, testamentos, certificaciones, notaría 80, guadalajara">
+  <meta name="author" content="Notaría Pública #80">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://notaria80gdl.mx/servicios.html">
+  <meta property="og:title" content="Servicios Notariales - Notaría Pública #80">
+  <meta property="og:description" content="Servicios notariales especializados: compraventa, testamentos, certificaciones y más.">
+  <meta property="og:image" content="/logo%20notaria%2080%20verde.png">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://notaria80gdl.mx/servicios.html">
+  <meta property="twitter:title" content="Servicios Notariales - Notaría Pública #80">
+  <meta property="twitter:description" content="Servicios notariales especializados: compraventa, testamentos, certificaciones y más.">
+  <meta property="twitter:image" content="/logo%20notaria%2080%20verde.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 overflow-x-hidden">
+
+  <!-- ── HEADER ── -->
+  <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 h-20 flex items-center glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2.5 shrink-0">
+        <img src="/logo%20notaria%2080%20verde.png" alt="Notaría Pública #80" class="w-9 h-9 md:w-12 md:h-12 object-contain header-logo-img">
+        <span class="hidden sm:block font-display font-bold text-sm md:text-base text-cream/90 header-logo-text">NOTARÍA 80</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 flex-1 justify-center">
+        <a href="/" class="text-sm font-semibold text-cream/70 hover:text-cream transition-colors">INICIO</a>
+        <a href="nosotros.html" class="text-sm font-semibold text-cream/70 hover:text-cream transition-colors">NOSOTROS</a>
+        <a href="servicios.html" class="nav-active text-sm font-semibold text-cream glass rounded-full px-4 py-1.5">SERVICIOS</a>
+        <a href="ubicacion.html" class="text-sm font-semibold text-cream/70 hover:text-cream transition-colors">CONTACTO</a>
+        <a href="https://wa.me/523311704104" target="_blank" class="btn-primary px-5 py-2.5 rounded-xl text-sm flex items-center gap-2 shadow-lg">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </nav>
+      <button id="nav-toggle" class="lg:hidden w-10 h-10 glass rounded-xl flex items-center justify-center text-lg text-cream cursor-pointer">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="nav-overlay fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden" id="nav-overlay"></div>
+  <div class="nav-menu fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-cream/95 backdrop-blur-2xl shadow-2xl z-50 translate-x-full transition-transform duration-300 ease-out lg:hidden" id="nav-menu">
+    <div class="flex justify-end p-6">
+      <button id="nav-close" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary cursor-pointer hover:bg-primary/20 transition-all">
+        <i class="fas fa-times text-xl"></i>
+      </button>
+    </div>
+    <nav class="flex flex-col items-center gap-6 pt-4 px-6">
+      <a href="/" class="text-lg font-semibold text-primary/70 hover:text-primary w-full text-center py-2">INICIO</a>
+      <a href="nosotros.html" class="text-lg font-semibold text-primary/70 hover:text-primary w-full text-center py-2">NOSOTROS</a>
+      <a href="servicios.html" class="text-xl font-bold text-primary w-full text-center py-3 border-b border-primary/10">SERVICIOS</a>
+      <a href="ubicacion.html" class="text-lg font-semibold text-primary/70 hover:text-primary w-full text-center py-2">CONTACTO</a>
+      <a href="https://wa.me/523311704104" target="_blank" class="btn-primary px-8 py-3.5 rounded-xl font-semibold flex items-center justify-center gap-3 w-full mt-4 text-lg">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </nav>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero-section relative min-h-[55vh] flex items-center bg-gradient-to-br from-primary-dark via-primary to-primary-dark overflow-hidden">
+    <div class="hero-bg-image hero-bg-visible" style="background-image: url('https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg?auto=compress&cs=tinysrgb&w=1920')"></div>
+    <div class="hero-pattern"></div>
+    <div class="floating-shape floating-shape-1"></div>
+    <div class="floating-shape floating-shape-2"></div>
+
+    <!-- Logo watermark decorativo -->
+    <div class="absolute right-0 top-1/2 -translate-y-1/2 z-[1] w-[28vw] h-[28vw] max-w-[400px] max-h-[400px] pointer-events-none select-none hidden lg:flex items-center justify-center opacity-[0.06]">
+      <img src="/logo%20notaria%2080%20verde.png" alt="" class="w-full h-full object-contain" aria-hidden="true">
+    </div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+      <div class="max-w-3xl">
+        <div class="reveal mb-8">
+          <span class="inline-flex items-center gap-2.5 glass rounded-full px-5 py-2 text-cream text-sm font-medium tracking-[0.15em] uppercase">
+            <i class="fas fa-gavel text-cream/70 text-xs"></i>
+            Soluciones Integrales
+          </span>
+        </div>
+
+        <h1 class="font-display text-cream reveal" style="transition-delay: 0.1s;">
+          <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.04] tracking-tight drop-shadow-xl">
+            Servicios
+          </span>
+          <span class="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light italic mt-2 text-cream/85 drop-shadow-lg">
+            notariales especializados
+          </span>
+        </h1>
+
+        <div class="flex items-center gap-4 my-8 reveal" style="transition-delay: 0.15s;">
+          <span class="block w-12 h-px bg-cream/20"></span>
+          <span class="block w-1.5 h-1.5 rounded-full bg-primary-light/50"></span>
+          <span class="block flex-1 h-px bg-cream/10"></span>
+        </div>
+
+        <p class="text-base sm:text-lg text-cream/55 max-w-xl leading-relaxed reveal" style="transition-delay: 0.2s;">
+          Ofrecemos una amplia gama de servicios notariales diseñados para brindar seguridad jurídica en cada uno de sus trámites, con atención personalizada y resultados confiables.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INTRO ── -->
+  <section class="py-20 lg:py-24 bg-cream relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
+          <div class="flex-1 reveal-left">
+            <div class="inline-flex items-center gap-3 px-4 py-2 bg-primary/5 rounded-full text-primary text-xs font-semibold tracking-[0.15em] uppercase mb-6">
+              <i class="fas fa-shield-alt text-primary-light"></i>
+              Confianza y Profesionalismo
+            </div>
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-primary leading-tight mb-6">
+              Seguridad jurídica<br>
+              <span class="text-primary-light font-light italic">en cada servicio</span>
+            </h2>
+            <p class="text-gray-600 leading-relaxed text-lg">
+              En la <strong class="text-primary">Notaría Pública #80</strong> ofrecemos una amplia gama de servicios notariales diseñados para brindar <strong class="text-primary-light">seguridad jurídica</strong> en cada uno de sus trámites. Nuestro equipo de profesionales altamente capacitados le garantiza atención personalizada y resultados confiables.
+            </p>
+          </div>
+          <div class="flex-shrink-0 reveal-right">
+            <div class="w-full max-w-sm lg:max-w-none lg:w-[450px]">
+              <!-- Decorative label -->
+              <div class="flex items-center justify-center gap-4 lg:gap-6 mb-6 lg:mb-7">
+                <span class="h-px flex-1 bg-gradient-to-r from-transparent to-primary/10"></span>
+                <div class="flex items-center gap-3">
+                  <span class="inline-flex items-center justify-center w-11 h-11 lg:w-12 lg:h-12 rounded-xl bg-gradient-to-br from-primary to-primary-dark shadow-lg">
+                    <span class="font-display text-lg lg:text-xl font-bold text-cream">6</span>
+                  </span>
+                  <span class="text-[0.65rem] lg:text-[0.7rem] text-primary/50 font-semibold tracking-[0.15em] uppercase leading-tight">Servicios<br>Especializados</span>
+                </div>
+                <span class="h-px flex-1 bg-gradient-to-l from-transparent to-primary/10"></span>
+              </div>
+
+              <!-- 3×2 Mini-grid of service icons (clickable → scroll to full card) -->
+              <div class="grid grid-cols-3 gap-3 lg:gap-4">
+                <!-- 1. Compraventa → Traslativos de Dominio -->
+                <a href="#servicio-traslativos" class="group relative bg-gradient-to-br from-primary-dark/90 to-primary/90 rounded-xl p-4 lg:p-5 flex flex-col items-center justify-center gap-2.5 border border-cream/10 transition-all duration-400 hover:bg-gradient-to-br hover:from-primary hover:to-primary-light hover:border-cream/25 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-t from-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"></div>
+                  <i class="fas fa-home text-cream/75 text-xl lg:text-2xl relative z-10 group-hover:text-cream transition-colors duration-300"></i>
+                  <span class="text-[0.6rem] lg:text-[0.7rem] leading-tight text-cream/50 font-medium text-center relative z-10 group-hover:text-cream/80 transition-colors duration-300">Compraventa</span>
+                </a>
+
+                <!-- 2. Testamentos → Sucesiones -->
+                <a href="#servicio-sucesiones" class="group relative bg-gradient-to-br from-primary-dark/90 to-primary/90 rounded-xl p-4 lg:p-5 flex flex-col items-center justify-center gap-2.5 border border-cream/10 transition-all duration-400 hover:bg-gradient-to-br hover:from-primary hover:to-primary-light hover:border-cream/25 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-t from-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"></div>
+                  <i class="fas fa-scroll text-cream/75 text-xl lg:text-2xl relative z-10 group-hover:text-cream transition-colors duration-300"></i>
+                  <span class="text-[0.6rem] lg:text-[0.7rem] leading-tight text-cream/50 font-medium text-center relative z-10 group-hover:text-cream/80 transition-colors duration-300">Testamentos</span>
+                </a>
+
+                <!-- 3. Corporativo -->
+                <a href="#servicio-corporativo" class="group relative bg-gradient-to-br from-primary-dark/90 to-primary/90 rounded-xl p-4 lg:p-5 flex flex-col items-center justify-center gap-2.5 border border-cream/10 transition-all duration-400 hover:bg-gradient-to-br hover:from-primary hover:to-primary-light hover:border-cream/25 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-t from-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"></div>
+                  <i class="fas fa-building text-cream/75 text-xl lg:text-2xl relative z-10 group-hover:text-cream transition-colors duration-300"></i>
+                  <span class="text-[0.6rem] lg:text-[0.7rem] leading-tight text-cream/50 font-medium text-center relative z-10 group-hover:text-cream/80 transition-colors duration-300">Corporativo</span>
+                </a>
+
+                <!-- 4. Poderes -->
+                <a href="#servicio-poderes" class="group relative bg-gradient-to-br from-primary-dark/90 to-primary/90 rounded-xl p-4 lg:p-5 flex flex-col items-center justify-center gap-2.5 border border-cream/10 transition-all duration-400 hover:bg-gradient-to-br hover:from-primary hover:to-primary-light hover:border-cream/25 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-t from-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"></div>
+                  <i class="fas fa-handshake text-cream/75 text-xl lg:text-2xl relative z-10 group-hover:text-cream transition-colors duration-300"></i>
+                  <span class="text-[0.6rem] lg:text-[0.7rem] leading-tight text-cream/50 font-medium text-center relative z-10 group-hover:text-cream/80 transition-colors duration-300">Poderes</span>
+                </a>
+
+                <!-- 5. Certificaciones -->
+                <a href="#servicio-certificaciones" class="group relative bg-gradient-to-br from-primary-dark/90 to-primary/90 rounded-xl p-4 lg:p-5 flex flex-col items-center justify-center gap-2.5 border border-cream/10 transition-all duration-400 hover:bg-gradient-to-br hover:from-primary hover:to-primary-light hover:border-cream/25 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-t from-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"></div>
+                  <i class="fas fa-certificate text-cream/75 text-xl lg:text-2xl relative z-10 group-hover:text-cream transition-colors duration-300"></i>
+                  <span class="text-[0.6rem] lg:text-[0.7rem] leading-tight text-cream/50 font-medium text-center relative z-10 group-hover:text-cream/80 transition-colors duration-300">Certificaciones</span>
+                </a>
+
+                <!-- 6. Asesoría Legal -->
+                <a href="#servicio-asesoria" class="group relative bg-gradient-to-br from-primary-dark/90 to-primary/90 rounded-xl p-4 lg:p-5 flex flex-col items-center justify-center gap-2.5 border border-cream/10 transition-all duration-400 hover:bg-gradient-to-br hover:from-primary hover:to-primary-light hover:border-cream/25 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-t from-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"></div>
+                  <i class="fas fa-balance-scale text-cream/75 text-xl lg:text-2xl relative z-10 group-hover:text-cream transition-colors duration-300"></i>
+                  <span class="text-[0.6rem] lg:text-[0.7rem] leading-tight text-cream/50 font-medium text-center relative z-10 group-hover:text-cream/80 transition-colors duration-300">Asesoría</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICIOS GRID ── -->
+  <section class="py-20 lg:py-28 bg-gradient-to-b from-cream/40 to-cream-dark relative overflow-hidden relative overflow-hidden">
+    <!-- Decorative top gradient line -->
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="text-primary-light text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">Nuestra Experiencia</span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-primary leading-tight">
+          Soluciones notariales<br>
+          <span class="text-primary-light font-light italic">integrales</span>
+        </h2>
+        <p class="text-gray-500 text-sm sm:text-base max-w-lg mx-auto leading-relaxed mt-6">
+          Cada servicio está respaldado por años de experiencia y un profundo conocimiento del marco legal mexicano.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 stagger-children">
+
+        <!-- 1. Traslativos de Dominio -->
+        <div id="servicio-traslativos" class="service-card group relative overflow-hidden scroll-mt-24">
+          <!-- Service number background -->
+          <span class="absolute -top-4 -right-4 text-[8rem] font-display font-black text-white/5 leading-none pointer-events-none select-none">01</span>
+          <div class="relative z-10">
+            <div class="service-card-icon mb-6">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-cream mb-3 group-hover:text-cream/80 transition-colors">Traslativos de Dominio</h3>
+            <p class="text-cream/65 text-sm leading-relaxed mb-5">
+              Escrituración de propiedades con total seguridad jurídica y transparencia en el proceso. Garantizamos la validez legal de cada transacción inmobiliaria.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="service-tag">Compraventa</span>
+              <span class="service-tag">Donación</span>
+              <span class="service-tag">Fideicomisos</span>
+              <span class="service-tag">Dación en pago</span>
+              <span class="service-tag">Adjudicaciones</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Sucesiones -->
+        <div id="servicio-sucesiones" class="service-card group relative overflow-hidden scroll-mt-24">
+          <span class="absolute -top-4 -right-4 text-[8rem] font-display font-black text-white/5 leading-none pointer-events-none select-none">02</span>
+          <div class="relative z-10">
+            <div class="service-card-icon mb-6">
+              <i class="fas fa-scroll"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-cream mb-3 group-hover:text-cream/80 transition-colors">Sucesiones</h3>
+            <p class="text-cream/65 text-sm leading-relaxed mb-5">
+              Elaboración de testamentos públicos abiertos para proteger el patrimonio familiar. Asesoría especializada en sucesiones y herencias.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="service-tag">Testamentos</span>
+              <span class="service-tag">Sucesión Testamentaria</span>
+              <span class="service-tag">Intestamentaria</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Corporativo -->
+        <div id="servicio-corporativo" class="service-card group relative overflow-hidden scroll-mt-24">
+          <span class="absolute -top-4 -right-4 text-[8rem] font-display font-black text-white/5 leading-none pointer-events-none select-none">03</span>
+          <div class="relative z-10">
+            <div class="service-card-icon mb-6">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-cream mb-3 group-hover:text-cream/80 transition-colors">Corporativo</h3>
+            <p class="text-cream/65 text-sm leading-relaxed mb-5">
+              Formalización de empresas y sociedades mercantiles con asesoría especializada. Desde microempresas hasta grandes corporaciones.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="service-tag">Constitución</span>
+              <span class="service-tag">Actas de asamblea</span>
+              <span class="service-tag">Protocolizaciones</span>
+              <span class="service-tag">Poderes</span>
+              <span class="service-tag">Fusión/Escisión</span>
+              <span class="service-tag">Liquidación</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Poderes Notariales -->
+        <div id="servicio-poderes" class="service-card group relative overflow-hidden scroll-mt-24">
+          <span class="absolute -top-4 -right-4 text-[8rem] font-display font-black text-white/5 leading-none pointer-events-none select-none">04</span>
+          <div class="relative z-10">
+            <div class="service-card-icon mb-6">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-cream mb-3 group-hover:text-cream/80 transition-colors">Poderes Notariales</h3>
+            <p class="text-cream/65 text-sm leading-relaxed mb-5">
+              Otorgamiento de poderes generales y especiales para representación legal. Documentos con validez nacional e internacional.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="service-tag">Poderes generales</span>
+              <span class="service-tag">Poderes especiales</span>
+              <span class="service-tag">Revocaciones</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Certificaciones -->
+        <div id="servicio-certificaciones" class="service-card group relative overflow-hidden scroll-mt-24">
+          <span class="absolute -top-4 -right-4 text-[8rem] font-display font-black text-white/5 leading-none pointer-events-none select-none">05</span>
+          <div class="relative z-10">
+            <div class="service-card-icon mb-6">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-cream mb-3 group-hover:text-cream/80 transition-colors">Certificaciones</h3>
+            <p class="text-cream/65 text-sm leading-relaxed mb-5">
+              Certificación de documentos y firmas con validez legal completa. Autenticación de copias y traducciones oficiales.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="service-tag">Firmas</span>
+              <span class="service-tag">Copias</span>
+              <span class="service-tag">Hechos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Asesoría Legal -->
+        <div id="servicio-asesoria" class="service-card group relative overflow-hidden scroll-mt-24">
+          <span class="absolute -top-4 -right-4 text-[8rem] font-display font-black text-white/5 leading-none pointer-events-none select-none">06</span>
+          <div class="relative z-10">
+            <div class="service-card-icon mb-6">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-cream mb-3 group-hover:text-cream/80 transition-colors">Asesoría Legal</h3>
+            <p class="text-cream/65 text-sm leading-relaxed mb-5">
+              Consultoría especializada en derecho notarial y civil para particulares y empresas. Orientación integral en trámites legales.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="service-tag">Consultoría notarial</span>
+              <span class="service-tag">Derecho civil</span>
+              <span class="service-tag">Derecho mercantil</span>
+              <span class="service-tag">Corporativo</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="bg-primary-dark text-cream relative overflow-hidden">
+    <div class="footer-glow-line"></div>
+    <div class="max-w-7xl mx-auto px-4 py-16 relative z-10">
+      <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-8 pb-12 border-b border-white/10 mb-8">
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3 mb-4">
+              <img src="/logo%20notaria%2080%20verde.png" alt="Notaría Pública #80" class="w-12 h-12 object-contain header-logo-img">
+              <div>
+                <h3 class="font-display text-lg font-bold text-cream">NOTARÍA 80</h3>
+                <p class="text-xs text-cream/60">Maestra María Enriqueta Ortiz Guerrero</p>
+              </div>
+            </div>
+          <p class="text-sm text-cream/50 leading-relaxed max-w-sm">
+            Brindamos servicios notariales profesionales con la más alta calidad y el compromiso de hacer la justicia accesible para todos.
+          </p>
+        </div>
+        <div class="lg:col-span-3">
+          <h4 class="font-display font-bold text-cream text-sm mb-4 uppercase tracking-wider">Contacto</h4>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-envelope text-cream/80 text-xs"></i></div>
+              <a href="mailto:notaria80gdl@hotmail.com" class="text-sm text-cream/60 hover:text-cream transition-colors">notaria80gdl@hotmail.com</a>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-phone-alt text-cream/80 text-xs"></i></div>
+              <div class="text-sm text-cream/60">
+                <a href="tel:+523319833354" class="hover:text-cream transition-colors block">33 1983 3354</a>
+                <a href="tel:+523319833355" class="hover:text-cream transition-colors block">33 1983 3355</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-map-marker-alt text-cream/80 text-xs"></i></div>
+              <a href="https://maps.app.goo.gl/twQxYo9FdYSYLmEw9" target="_blank" class="text-sm text-cream/60 hover:text-cream transition-colors leading-snug">C. Pablo Villaseñor 125, Ladrón de Guevara, 44600 Guadalajara</a>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-2">
+          <h4 class="font-display font-bold text-cream text-sm mb-4 uppercase tracking-wider">Horarios</h4>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-clock text-cream/80 text-xs"></i></div>
+            <div class="text-sm text-cream/60">
+              <p class="font-medium text-cream/80">Lunes a Viernes</p>
+              <p>9:00 AM – 5:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-3">
+          <h4 class="font-display font-bold text-cream text-sm mb-4 uppercase tracking-wider">Atención Rápida</h4>
+          <a href="https://wa.me/523311704104" target="_blank" class="btn-primary px-5 py-3 rounded-xl text-sm flex items-center gap-2 shadow-lg w-fit">
+            <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+          </a>
+          <div class="flex items-start gap-3 mt-3">
+            <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-phone text-cream/80 text-xs"></i></div>
+            <a href="tel:+523336306433" class="text-sm text-cream/60 hover:text-cream transition-colors">33 3630 6433</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-cream/50">
+        <p>&copy; 2025 Notaría 80. Todos los derechos reservados.</p>
+        <div class="flex items-center gap-2">
+          <span>Desarrollado por</span>
+          <a href="https://mvgn.vercel.app/" target="_blank" class="mvgn-link text-cream/70 font-semibold">MVGN Labs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-to-top" class="fixed bottom-6 right-6 z-40 w-12 h-12 bg-primary text-cream rounded-2xl shadow-xl flex items-center justify-center text-lg opacity-0 pointer-events-none transition-all duration-300 hover:bg-primary-dark hover:-translate-y-1 cursor-pointer shadow-primary/20">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
