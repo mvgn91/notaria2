@@ -325,6 +325,41 @@ body {
   overflow: hidden;
 }
 
+/* ── Fondo de la hero ──
+   Capa base institucional: retícula de papel notarial sobre verde,
+   con halo de luz y viñeta. Sin imágenes externas.
+   Para integrar el asset de React Bits / 21st.dev, monta el componente
+   dentro de #hero-bg-layer o sustituye el background-image de esta clase.
+   ────────────────────────────────────────── */
+.hero-bg-institutional {
+  background-color: var(--color-primary-dark);
+  background-image:
+    radial-gradient(115% 95% at 82% -10%, rgba(var(--color-primary-light-rgb), 0.5) 0%, transparent 58%),
+    linear-gradient(to right, rgba(var(--color-cream-rgb), 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(var(--color-cream-rgb), 0.055) 1px, transparent 1px);
+  background-size: 100% 100%, 96px 96px, 96px 96px;
+  -webkit-mask-image: linear-gradient(104deg, transparent 0%, rgba(0, 0, 0, 0.35) 32%, #000 76%);
+  mask-image: linear-gradient(104deg, transparent 0%, rgba(0, 0, 0, 0.35) 32%, #000 76%);
+}
+
+.hero-vignette {
+  background: radial-gradient(ellipse 78% 68% at 40% 46%, transparent 0%, rgba(9, 21, 14, 0.62) 100%);
+}
+
+/* CTA principal sobre fondo verde — usa el crema institucional */
+.btn-cream {
+  background: var(--color-cream);
+  color: var(--color-primary-dark);
+  @apply font-semibold;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-cream:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px -14px rgba(0, 0, 0, 0.55);
+}
+
 /* ── Hero Background Crossfade ──
    3 imágenes legales en capas stackeadas con crossfade suave.
    ────────────────────────────────────────── */
@@ -2015,10 +2050,6 @@ body {
     padding-left: 3rem !important;
   }
 
-  .hero-section {
-    min-height: 70vh;
-  }
-
   .service-card {
     padding: 1.5rem;
   }
@@ -2053,16 +2084,8 @@ body {
 
 /* Pantallas pequeñas (móviles grandes) */
 @media (max-width: 480px) {
-  .hero-section {
-    min-height: 65vh;
-  }
-
-  .hero-section .font-display span.text-5xl {
+  .hero-section h1 span {
     font-size: 2.5rem !important;
-  }
-
-  .hero-section .font-display span.text-2xl {
-    font-size: 1.25rem !important;
   }
 
   .service-card {
@@ -2145,16 +2168,8 @@ body {
 
 /* Pantallas muy pequeñas (iPhone SE, etc.) */
 @media (max-width: 380px) {
-  .hero-section {
-    min-height: 60vh;
-  }
-
-  .hero-section .font-display span.text-5xl {
+  .hero-section h1 span {
     font-size: 2rem !important;
-  }
-
-  .hero-section .font-display span.text-2xl {
-    font-size: 1.1rem !important;
   }
 
   .service-card {
@@ -2225,12 +2240,8 @@ body {
 
 /* Pantallas extremadamente pequeñas (320px) */
 @media (max-width: 320px) {
-  .hero-section .font-display span.text-5xl {
+  .hero-section h1 span {
     font-size: 1.75rem !important;
-  }
-
-  .hero-section .font-display span.text-2xl {
-    font-size: 1rem !important;
   }
 
   .grid.grid-cols-2.sm\:grid-cols-3.lg\:grid-cols-6 {

@@ -40,6 +40,22 @@
 - T-024 completada: Despliegue listo en Vercel (notaria80gdl.mx); build de producción pendiente de revisión del operador
 - Progreso: 10/10 tareas completadas — overhaul listo para revisión y merge a main
 
+## v1.3.1 — 26/10/2026
+
+- Sección "Métricas de Confianza" eliminada de Inicio (index.html y src/pages/index.astro) por indicación del operador: demasiado "marketing" para el tipo de sitio
+- CSS depurado: eliminadas las clases .stat-card, .stat-number y .stat-counter
+- T-025 completada: hero de Inicio rediseñada
+  - Eslogan editorial en Fraunces: "Su patrimonio," / "en firme." (segunda línea en itálica)
+  - Badge institucional "Fe Pública · Seguridad Jurídica" sin iconografía recargada
+  - CTA principal en crema institucional (.btn-cream) + CTA secundario de teléfono con borde
+  - Pie institucional: Notaría Pública #80 · Guadalajara, Jalisco · Titular
+  - Fondo propio sin imágenes externas: .hero-bg-institutional (retícula notarial con máscara diagonal + halo verde) y .hero-vignette
+  - Capa reservada `#hero-bg-layer` para montar el asset de React Bits / 21st.dev
+  - Altura 100svh real, eliminados los overrides legacy de min-height y de los antiguos spans del hero
+- docs/03_tasks.md actualizado: T-015 a T-023 y T-025 completadas; T-026 (integrar asset) y T-024 (deploy) pendientes. Progreso 11/13
+- Build de producción verificado (4 páginas, sin errores)
+- Sin cambios en contenidos, logos ni colores institucionales
+
 ## v1.0.0 — 24/06/2026
 
 - Implementación inicial del sitio web

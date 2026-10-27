@@ -31,17 +31,19 @@
 
 | ID | Descripción | Estado | Prioridad | Dependencias | Ref PRD | Ref Arq |
 |----|------------|--------|-----------|-------------|---------|---------|
-| T-015 | Análisis comparativo: prototipo cliente vs sitio actual — brechas y oportunidades | Pendiente | Alta | — | RF-01 a RF-09 | — |
-| T-016 | Análisis de referencias del rubro — tokens de diseño y patrones UX (pitblado.com, hafnialaw.com, notariapublica11.mx) | Pendiente | Alta | T-015 | RNF-01, RNF-02 | — |
-| T-017 | Definir propuesta de diseño overhaul (estructura, wireframes, motion) manteniendo contenidos, logos y colores | Pendiente | Alta | T-016 | RF-01 a RF-09 | ADR-01, ADR-02 |
-| T-018 | Rediseñar página Inicio: hero editorial, eslogan, métricas de confianza, servicios destacados, aliados, testimonios | Pendiente | Alta | T-017 | RF-01, RF-09 | — |
-| T-019 | Rediseñar página Nosotros: perfil titular, valores institucionales, instalaciones con galería tipo Hafnia | Pendiente | Alta | T-017 | RF-02 | — |
-| T-020 | Rediseñar página Servicios: catálogo con sub-detalles, proceso paso a paso, sección créditos hipotecarios | Pendiente | Alta | T-017 | RF-03 | — |
-| T-021 | Rediseñar página Contacto/Ubicación: mapa, formulario, CTA WhatsApp/teléfono, horarios, acción rápida | Pendiente | Alta | T-017 | RF-04 | — |
-| T-022 | Implementar nuevos tokens de diseño (tipografía, espaciado, componentes, motion) | Pendiente | Media | T-017 | RNF-01, RNF-04 | — |
-| T-023 | Optimizar rendimiento (Lighthouse), SEO y accesibilidad | Pendiente | Alta | T-018 a T-021 | RNF-02, RNF-03 | — |
-| T-024 | Desplegar overhaul en producción (Vercel) y verificar | Pendiente | Alta | T-023 | RNF-06 | — |
+| T-015 | Análisis comparativo: prototipo cliente vs sitio actual — brechas y oportunidades | Completada | Alta | — | RF-01 a RF-09 | — |
+| T-016 | Análisis de referencias del rubro — tokens de diseño y patrones UX (pitblado.com, hafnialaw.com, notariapublica11.mx) | Completada | Alta | T-015 | RNF-01, RNF-02 | — |
+| T-017 | Definir propuesta de diseño overhaul (estructura, wireframes, motion) manteniendo contenidos, logos y colores | Completada | Alta | T-016 | RF-01 a RF-09 | ADR-01, ADR-02 |
+| T-018 | Rediseñar página Inicio: servicios destacados 3→6, aliados, testimonios (sección de métricas descartada por el operador) | Completada | Alta | T-017 | RF-01, RF-09 | — |
+| T-019 | Rediseñar página Nosotros: perfil titular, valores institucionales, numeración editorial | Completada | Alta | T-017 | RF-02 | — |
+| T-020 | Rediseñar página Servicios: catálogo con sub-detalles, proceso paso a paso | Completada | Alta | T-017 | RF-03 | — |
+| T-021 | Rediseñar página Contacto/Ubicación: mapa, formulario, CTA WhatsApp/teléfono, horarios, acción rápida | Completada | Alta | T-017 | RF-04 | — |
+| T-022 | Implementar nuevos tokens de diseño (tipografía, espaciado, componentes, motion) | Completada | Media | T-017 | RNF-01, RNF-04 | — |
+| T-023 | Optimizar rendimiento (Lighthouse), SEO y accesibilidad | Completada | Alta | T-018 a T-021 | RNF-02, RNF-03 | — |
+| T-025 | Rediseñar hero de Inicio: eslogan editorial, CTA crema/WhatsApp, retícula institucional, fondo sin imágenes externas | Completada | Alta | T-018 | RF-01 | — |
+| T-026 | Integrar asset de React Bits / 21st.dev en la hero y validar retícula visual con el operador | Pendiente | Alta | T-025 | RNF-01, RNF-02 | ADR-01 |
+| T-024 | Desplegar overhaul en producción (Vercel) y verificar | Pendiente | Alta | T-023, T-026 | RNF-06 | — |
 
-**Resumen nueva fase:** 0 / 10 tareas completadas
+**Resumen nueva fase:** 11 / 13 tareas completadas
 
 **Regla:** No ejecutar tareas sin criterios de aceptación definidos y sin transitar el estado en `06_state_report.md`.
