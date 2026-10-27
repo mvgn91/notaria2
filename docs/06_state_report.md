@@ -8,9 +8,9 @@
 |-------|-------|
 | **Estado** | READY_TO_BUILD |
 | **Tarea activa** | T-015 |
-| **Progreso** | 1 / 10 completadas |
-| **Última acción** | T-015 completada — Análisis comparativo prototipo cliente vs sitio actual: 8 brechas identificadas (métricas, aliados, créditos hipotecarios, proceso, instalaciones, CTA WhatsApp, aviso privacidad, diseño genérico) |
-| **Siguiente acción** | Ejecutar T-016 — Análisis de referencias del rubro (pitblado.com, hafnialaw.com, notariapublica11.mx) |
+| **Progreso** | 2 / 10 completadas |
+| **Última acción** | T-016 completada — Análisis de referencias del rubro: notariapublica11.mx (métricas, titular, servicios detallados), pitblado.com (motion UI, valores, hero editorial), hafnialaw.com (galería editorial, proceso en pasos, numeración). Tokens de diseño definidos para T-022. |
+| **Siguiente acción** | Ejecutar T-017 — Definir propuesta de diseño overhaul (estructura, wireframes, motion) manteniendo contenidos, logos y colores |
 | **Modo** | FAST |
 | **Bloqueos activos** | — |
 
