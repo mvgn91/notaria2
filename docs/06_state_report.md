@@ -8,9 +8,9 @@
 |-------|-------|
 | **Estado** | READY_TO_BUILD |
 | **Tarea activa** | T-015 |
-| **Progreso** | 0 / 10 completadas |
-| **Última acción** | Overhaul aprobado: rama feature/overhaul-notaria-80 creada, respaldo en main, tareas T-015 a T-024 definidas en 03_tasks.md |
-| **Siguiente acción** | Ejecutar T-015 — Análisis comparativo prototipo cliente vs sitio actual |
+| **Progreso** | 1 / 10 completadas |
+| **Última acción** | T-015 completada — Análisis comparativo prototipo cliente vs sitio actual: 8 brechas identificadas (métricas, aliados, créditos hipotecarios, proceso, instalaciones, CTA WhatsApp, aviso privacidad, diseño genérico) |
+| **Siguiente acción** | Ejecutar T-016 — Análisis de referencias del rubro (pitblado.com, hafnialaw.com, notariapublica11.mx) |
 | **Modo** | FAST |
 | **Bloqueos activos** | — |
 

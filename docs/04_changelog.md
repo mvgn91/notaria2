@@ -28,6 +28,7 @@
 - docs/03_tasks.md: tareas T-015 a T-024 definidas (overhaul, sin tocar contenidos/logos/colores)
 - docs/06_state_report.md: Estado READY_TO_BUILD, tarea activa T-015, progreso 0/10
 - Referencias de diseño: notariapublica11.mx (base aceptada), pitblado.com (motion UI), hafnialaw.com (galería editorial)
+- T-015 completada: análisis comparativo prototipo cliente vs sitio actual, 8 brechas identificadas
 
 ## v1.0.0 — 24/06/2026
 
