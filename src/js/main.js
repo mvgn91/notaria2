@@ -416,9 +416,6 @@ function carouselResetAuto() {
 
 function initClientsCarousel() {
   const track = document.getElementById('carouselTrack')
-  const prevBtn = document.getElementById('carouselPrev')
-  const nextBtn = document.getElementById('carouselNext')
-  const dotsContainer = document.getElementById('carouselDots')
   const carousel = document.getElementById('clientsCarousel')
   if (!track) return
 
@@ -430,172 +427,93 @@ function initClientsCarousel() {
   carouselState.clientNames = cards.map(c => c.getAttribute('data-client'))
   carouselState.originalTotal = originalCount
 
-  // ── Obtener gap del track ──
-  function getGap() {
-    const style = window.getComputedStyle(track)
-    return parseFloat(style.gap) || 16
-  }
-
-  // ── Obtener ancho de scroll por tarjeta ──
-  function getCardStep() {
-    if (!cards.length) return 200
-    return cards[0].offsetWidth + getGap()
-  }
-
-  // ── Clonar tarjetas para loop infinito ──
+  // ── Clonar el set completo para el loop infinito ──
   cards.forEach(card => {
     const clone = card.cloneNode(true)
-    clone.classList.remove('active-card')
     const origIdx = parseInt(card.getAttribute('data-index')) || 0
     clone.setAttribute('data-index', origIdx + originalCount)
+    clone.setAttribute('aria-hidden', 'true')
     track.appendChild(clone)
   })
-
   const allCards = Array.from(track.querySelectorAll('.client-card'))
 
-  // ── Crear dots (solo para originales) ──
-  if (dotsContainer) {
-    cards.forEach((_, i) => {
-      const dot = document.createElement('button')
-      dot.className = `carousel-dot${i === 0 ? ' active' : ''}`
-      dot.setAttribute('aria-label', `Ir a ${cards[i].getAttribute('data-client') || `cliente ${i + 1}`}`)
-      dot.addEventListener('click', () => {
-        pauseAuto()
-        goTo(i)
-        scheduleResume(4000)
-      })
-      dotsContainer.appendChild(dot)
-    })
+  // ── Movimiento continuo con rAF (sin saltos ni teleports) ──
+  const BASE_SPEED = 45       // px/segundo
+  const SLOW_FACTOR = 0.15    // hover-to-slow: ralentiza, no corta
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+  let x = 0
+  let half = 0
+  let speed = 0
+  let hovering = false
+  let stopped = false
+  let lastTime = 0
+
+  function measure() {
+    half = track.scrollWidth / 2
+    if (half > 0) x = x % half
+    track.style.transform = `translate3d(${x}px, 0, 0)`
   }
 
-  // ── Estado interno ──
-  let currentIndex = 0
-  let autoTimer = null
-  let teleportTimer = null
-  let resumeTimer = null
-  let isPaused = false
+  function frame(time) {
+    if (!lastTime) lastTime = time
+    const dt = Math.min((time - lastTime) / 1000, 0.05)
+    lastTime = time
 
-  // ── goTo — ir a un índice específico con animación ──
-  function goTo(index) {
-    currentIndex = Math.max(0, Math.min(index, originalCount - 1))
-    const step = getCardStep()
-    const offset = -(currentIndex * step)
-    track.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)'
-    track.style.transform = `translateX(${offset}px)`
-    updateDots()
-    updateActiveCard()
-  }
+    const desired = (reduceMotion || stopped)
+      ? 0
+      : (hovering ? BASE_SPEED * SLOW_FACTOR : BASE_SPEED)
 
-  function go(dir) {
-    const next = (currentIndex + dir + originalCount) % originalCount
-    goTo(next)
-  }
+    // lerp exponencial → desacelera y acelera sin cambios bruscos
+    speed += (desired - speed) * (1 - Math.exp(-dt * 5))
 
-  // ── Actualizar dots ──
-  function updateDots() {
-    if (!dotsContainer) return
-    dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
-      d.classList.toggle('active', i === currentIndex)
-    })
-  }
-
-  // ── Actualizar card activa (el glow) ──
-  function updateActiveCard() {
-    allCards.forEach(c => {
-      const idx = parseInt(c.getAttribute('data-index')) || 0
-      c.classList.toggle('active-card', idx === currentIndex)
-    })
-  }
-
-  // ── Auto-play con loop infinito ──
-  function startAuto() {
-    stopAuto()
-    if (isPaused) return
-
-    function tick() {
-      const nextIdx = currentIndex + 1
-      const step = getCardStep()
-      const offset = -(nextIdx * step)
-
-      track.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
-      track.style.transform = `translateX(${offset}px)`
-
-      currentIndex = nextIdx
-
-      // Si pasamos el set original, hacer un teleport silencioso al inicio
-      if (currentIndex >= originalCount) {
-        clearTimeout(teleportTimer)
-        teleportTimer = setTimeout(() => {
-          currentIndex = 0
-          track.style.transition = 'none'
-          track.style.transform = 'translateX(0px)'
-          // Forzar reflow
-          void track.offsetHeight
-          teleportTimer = null
-        }, 800)
-      }
-
-      const logicalIdx = currentIndex % originalCount
-      updateDots()
-      allCards.forEach(c => {
-        const idx = parseInt(c.getAttribute('data-index')) || 0
-        c.classList.toggle('active-card', idx === logicalIdx || idx === currentIndex)
-      })
-
-      autoTimer = setTimeout(tick, 3500)
+    if (half > 0 && speed > 0.01) {
+      x -= speed * dt
+      while (x <= -half) x += half
+      track.style.transform = `translate3d(${x}px, 0, 0)`
     }
 
-    // Iniciar ciclo — primer movimiento más rápido (1.5s) para no verse estático al cargar
-    autoTimer = setTimeout(tick, 1500)
+    requestAnimationFrame(frame)
   }
 
-  function stopAuto() {
-    clearTimeout(autoTimer)
-    clearTimeout(teleportTimer)
-    autoTimer = null
-    teleportTimer = null
+  measure()
+  window.addEventListener('load', measure)
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(measure).observe(track)
+  } else {
+    window.addEventListener('resize', measure)
+  }
+  requestAnimationFrame(frame)
+
+  // ── Hover / touch → desacelerar suave ──
+  if (carousel) {
+    carousel.addEventListener('mouseenter', () => { hovering = true })
+    carousel.addEventListener('mouseleave', () => { hovering = false })
+    carousel.addEventListener('touchstart', () => { hovering = true }, { passive: true })
+    carousel.addEventListener('touchend', () => { hovering = false }, { passive: true })
+    carousel.addEventListener('touchcancel', () => { hovering = false }, { passive: true })
   }
 
-  function pauseAuto() {
-    isPaused = true
-    stopAuto()
+  // ── Funciones globales que consume el drawer ──
+  window.__carouselStop = () => { stopped = true }
+  window.__carouselStart = () => { stopped = false }
+  window.__carouselGetIndex = () => carouselState.currentIndex
+  window.__carouselGoTo = (index) => {
+    carouselState.currentIndex = index
+    allCards.forEach(card => {
+      const idx = parseInt(card.getAttribute('data-index')) || 0
+      const logical = idx >= originalCount ? idx - originalCount : idx
+      card.classList.toggle('active-card', logical === index)
+    })
   }
 
-  function scheduleResume(delay) {
-    clearTimeout(resumeTimer)
-    resumeTimer = setTimeout(() => {
-      isPaused = false
-      startAuto()
-    }, delay)
-  }
-
-  // Exponer funciones para uso global
-  window.__carouselStop = stopAuto
-  window.__carouselStart = startAuto
-  window.__carouselGoTo = goTo
-  window.__carouselGetIndex = () => currentIndex
-
-  // ── Click en flechas ──
-  prevBtn?.addEventListener('click', () => {
-    pauseAuto()
-    go(-1)
-    scheduleResume(4000)
-  })
-  nextBtn?.addEventListener('click', () => {
-    pauseAuto()
-    go(1)
-    scheduleResume(4000)
-  })
-
-  // ── Click en cards: abrir sidebar (event delegation en el track)
-  //     Usamos delegación para cubrir tanto tarjetas originales como clonadas.
+  // ── Click en un logo → drawer con detalles del cliente ──
   track.addEventListener('click', (e) => {
     const card = e.target.closest('.client-card')
     if (!card) return
 
     const clientName = card.getAttribute('data-client')
     const rawIndex = parseInt(card.getAttribute('data-index')) || 0
-    // Normalizar índice: si es un clon, usar el índice lógico
     const logicalIndex = rawIndex >= originalCount ? rawIndex - originalCount : rawIndex
     const data = CLIENTS_DATA[clientName]
     if (!data) return
@@ -604,49 +522,11 @@ function initClientsCarousel() {
     const logoFailed = card.classList.contains('logo-failed')
     const logoSrc = img && !logoFailed ? img.getAttribute('src') : ''
 
-    goTo(logicalIndex)
     openSpothub(clientName, data.description, data.url, logoSrc, logicalIndex)
   })
 
-  // ── Pausa en hover ──
-  if (carousel) {
-    carousel.addEventListener('mouseenter', () => {
-      pauseAuto()
-    })
-    carousel.addEventListener('mouseleave', () => {
-      scheduleResume(0)
-    })
-  }
-
-  // ── Touch swipe support ──
-  let touchStartX = 0
-  track.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX
-    pauseAuto()
-  }, { passive: true })
-  track.addEventListener('touchend', (e) => {
-    const diff = touchStartX - e.changedTouches[0].screenX
-    if (Math.abs(diff) > 50) {
-      if (diff > 0) go(1)
-      else go(-1)
-    }
-    scheduleResume(4000)
-  }, { passive: true })
-
-  // ── Resize handler ──
-  let resizeTimer
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer)
-    resizeTimer = setTimeout(() => {
-      stopAuto()
-      goTo(currentIndex)
-      if (!isPaused) startAuto()
-    }, 200)
-  })
-
-  // ── Inicializar ──
-  goTo(0)
-  startAuto()
+  // ── Estado inicial ──
+  window.__carouselGoTo(0)
 }
 
 /* ─═ SPOTHUB DRAWER ═─ */
@@ -743,13 +623,14 @@ function navigateSpothub(dir) {
   const content = document.getElementById('spothubContent')
   content?.classList.add('spothub-content-transition')
 
+  // Sincronizar estado ANTES de poblar: el contador usa currentIndex
+  carouselState.currentIndex = newIndex
   populateSpothubContent(clientName, data.description, data.url, logoSrc)
 
-  // Sincronizar carrusel: mover a la tarjeta correspondiente
+  // Sincronizar cintillo (resalta la card correspondiente)
   if (typeof window.__carouselGoTo === 'function') {
     window.__carouselGoTo(newIndex)
   }
-  carouselState.currentIndex = newIndex
 
   // Reset auto-play
   carouselResetAuto()

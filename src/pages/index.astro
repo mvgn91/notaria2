@@ -587,20 +587,14 @@ import BaseLayout from "../layouts/BaseLayout.astro"
       <div class="text-center mb-14 reveal">
         <span class="text-primary-light text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">Instituciones que confían</span>
         <h2 class="font-display text-4xl md:text-5xl font-bold text-cream">Nuestros Clientes</h2>
-        <p class="text-cream/60 text-sm sm:text-base max-w-lg mx-auto leading-relaxed mt-3">Desliza o navega para conocer las instituciones que confían en nosotros.</p>
+        <p class="text-cream/60 text-sm sm:text-base max-w-lg mx-auto leading-relaxed mt-3">Pasa el cursor para ralentizar el cintillo y da clic en un logo para conocer cada institución.</p>
       </div>
     </div>
 
-    <!-- ══ CARRUSEL DE CLIENTES ══ -->
-    <div class="clients-carousel relative z-10" id="clientsCarousel">
-      <!-- Flecha izquierda -->
-      <button class="carousel-arrow carousel-arrow-left" id="carouselPrev" aria-label="Anterior cliente">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-
-      <!-- Viewport (máscara de overflow) -->
-      <div class="clients-carousel-viewport">
-        <div class="clients-carousel-track" id="carouselTrack">
+    <!-- ══ CINTILLO DE MARCAS — marquee infinito ══ -->
+    <div class="clients-marquee relative z-10" id="clientsCarousel">
+      <div class="clients-marquee-mask">
+        <div class="clients-marquee-track" id="carouselTrack">
           <div class="client-card" data-client="Infonavit" data-index="0">
             <img src="/assets/images/Logo_INFONAVIT.svg" alt="Infonavit" class="client-logo" onerror="imgFallback(this)">
             <span class="client-name">Infonavit</span>
@@ -643,14 +637,6 @@ import BaseLayout from "../layouts/BaseLayout.astro"
           </div>
         </div>
       </div>
-
-      <!-- Flecha derecha -->
-      <button class="carousel-arrow carousel-arrow-right" id="carouselNext" aria-label="Siguiente cliente">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-
-      <!-- Dots indicadores -->
-      <div class="carousel-dots" id="carouselDots"></div>
     </div>
 
     <!-- ══ DRAWER — SPOTHUB DE CLIENTES ══ -->
