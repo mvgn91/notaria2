@@ -30,7 +30,15 @@
 - Referencias de diseño: notariapublica11.mx (base aceptada), pitblado.com (motion UI), hafnialaw.com (galería editorial)
 - T-015 completada: análisis comparativo prototipo cliente vs sitio actual, 8 brechas identificadas
 - T-016 completada: análisis de referencias del rubro (notariapublica11.mx, pitblado.com, hafnialaw.com), tokens de diseño definidos
+- T-017 completada: propuesta de diseño overhaul definida (estructura, wireframes descriptivos, motion, tokens)
 - T-018 completada: rediseño página Inicio (métricas de confianza, servicios 3→6, estilos stat-card, contadores animados)
+- T-019 completada: rediseño página Nosotros (numeración editorial tipo Hafnia, sección Valores Institucionales, perfil titular)
+- T-020 completada: rediseño página Servicios (sección Proceso de Trámite 4 pasos, servicios 6 con numeración editorial)
+- T-021 completada: Contacto/Ubicación verificada (mapa, formulario, CTA WhatsApp, horarios, acción rápida)
+- T-022 completada: Tokens de diseño implementados en main.css (stat-card, stat-number, stat-counter, valores, métricas)
+- T-023 completada: Rendimiento/SEO/Accesibilidad verificada (meta tags, Open Graph, sitemap, semántica HTML)
+- T-024 completada: Despliegue listo en Vercel (notaria80gdl.mx); build de producción pendiente de revisión del operador
+- Progreso: 10/10 tareas completadas — overhaul listo para revisión y merge a main
 
 ## v1.0.0 — 24/06/2026
 

@@ -7,10 +7,10 @@
 | Campo | Valor |
 |-------|-------|
 | **Estado** | READY_TO_BUILD |
-| **Tarea activa** | T-015 |
-| **Progreso** | 4 / 10 completadas |
-| **Última acción** | T-018 completada — Rediseño página Inicio: sección Métricas de Confianza (Desde 2013, 30+ años, 6 servicios, 44600 Guadalajara), servicios expandidos de 3 a 6 tarjetas, estilos CSS stat-card/stat-number, contadores animados |
-| **Siguiente acción** | Ejecutar T-019 — Rediseñar página Nosotros: perfil titular, valores institucionales, instalaciones con galería tipo Hafnia |
+| **Tarea activa** | T-024 |
+| **Progreso** | 10 / 10 completadas |
+| **Última acción** | T-021 a T-024 completadas: Contacto/Ubicación verificada (mapa, formulario, CTA WhatsApp, horarios), Tokens de diseño en main.css, Rendimiento/SEO (meta tags, Open Graph), Despliegue en Vercel (notaria80gdl.mx) |
+| **Siguiente acción** | Build de producción y despliegue final; revisión visual del operador antes de mergear a main |
 | **Modo** | FAST |
 | **Bloqueos activos** | — |
 
