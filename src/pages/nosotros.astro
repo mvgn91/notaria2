@@ -117,6 +117,8 @@ import BaseLayout from "../layouts/BaseLayout.astro"
               <div class="gallery-slide"><img src="https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Área de espera" class="w-full h-full object-cover cursor-pointer"></div>
               <div class="gallery-slide"><img src="https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Archivo digital" class="w-full h-full object-cover cursor-pointer"></div>
             </div>
+            <!-- Numeración editorial tipo Hafnia -->
+            <div class="absolute -top-6 -right-6 text-[8rem] font-display font-black text-white/5 leading-none pointer-events-none select-none">01</div>
             <button class="gallery-prev absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 bg-cream/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg text-primary hover:bg-white transition-all z-10 cursor-pointer"><i class="fas fa-chevron-left"></i></button>
             <button class="gallery-next absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 bg-cream/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg text-primary hover:bg-white transition-all z-10 cursor-pointer"><i class="fas fa-chevron-right"></i></button>
             <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
@@ -156,6 +158,63 @@ import BaseLayout from "../layouts/BaseLayout.astro"
               </span>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── VALORES INSTITUCIONALES ── (nueva sección — overhaul T-019) -->
+  <section class="py-24 lg:py-32 bg-primary-dark relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.pexels.com/photos/1181722/pexels-photo-1181722.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-15"></div>
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+      <div class="text-center mb-16 reveal">
+        <span class="text-primary-light text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">Nuestra Esencia</span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-cream mb-4">Valores Institucionales</h2>
+        <p class="text-cream/60 text-sm sm:text-base max-w-lg mx-auto leading-relaxed mt-3">Principios que definen nuestra forma de trabajar y relacionarnos con cada cliente que confía en nosotros.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+        <div class="value-card glass-dark rounded-2xl p-7 text-center hover:-translate-y-2 transition-all duration-300 cursor-pointer backdrop-blur-md group">
+          <div class="value-icon-wrap-outline mx-auto mb-5 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <span class="block text-lg font-display font-bold text-cream mb-2">Integridad</span>
+          <p class="text-cream/65 text-sm leading-relaxed">Actuamos con honestidad y transparencia en cada acción notarial.</p>
+        </div>
+        <div class="value-card glass-dark rounded-2xl p-7 text-center hover:-translate-y-2 transition-all duration-300 cursor-pointer backdrop-blur-md group">
+          <div class="value-icon-wrap-outline mx-auto mb-5 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <span class="block text-lg font-display font-bold text-cream mb-2">Confianza</span>
+          <p class="text-cream/65 text-sm leading-relaxed">Construimos relaciones duraderas basadas en la certeza jurídica.</p>
+        </div>
+        <div class="value-card glass-dark rounded-2xl p-7 text-center hover:-translate-y-2 transition-all duration-300 cursor-pointer backdrop-blur-md group">
+          <div class="value-icon-wrap-outline mx-auto mb-5 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
+            <i class="fas fa-star"></i>
+          </div>
+          <span class="block text-lg font-display font-bold text-cream mb-2">Excelencia</span>
+          <p class="text-cream/65 text-sm leading-relaxed">Buscamos la más alta calidad en cada servicio que ofrecemos.</p>
+        </div>
+        <div class="value-card glass-dark rounded-2xl p-7 text-center hover:-translate-y-2 transition-all duration-300 cursor-pointer backdrop-blur-md group">
+          <div class="value-icon-wrap-outline mx-auto mb-5 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
+            <i class="fas fa-users"></i>
+          </div>
+          <span class="block text-lg font-display font-bold text-cream mb-2">Servicio</span>
+          <p class="text-cream/65 text-sm leading-relaxed">Ponemos a las personas en el centro de nuestra labor notarial.</p>
+        </div>
+        <div class="value-card glass-dark rounded-2xl p-7 text-center hover:-translate-y-2 transition-all duration-300 cursor-pointer backdrop-blur-md group">
+          <div class="value-icon-wrap-outline mx-auto mb-5 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <span class="block text-lg font-display font-bold text-cream mb-2">Innovación</span>
+          <p class="text-cream/65 text-sm leading-relaxed">Incorporamos tecnología para hacer más ágil cada trámite.</p>
+        </div>
+        <div class="value-card glass-dark rounded-2xl p-7 text-center hover:-translate-y-2 transition-all duration-300 cursor-pointer backdrop-blur-md group">
+          <div class="value-icon-wrap-outline mx-auto mb-5 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <span class="block text-lg font-display font-bold text-cream mb-2">Justicia</span>
+          <p class="text-cream/65 text-sm leading-relaxed">Garantizamos imparcialidad y equidad en todos los actos.</p>
         </div>
       </div>
     </div>

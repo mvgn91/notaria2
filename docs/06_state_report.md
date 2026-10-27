@@ -8,9 +8,9 @@
 |-------|-------|
 | **Estado** | READY_TO_BUILD |
 | **Tarea activa** | T-015 |
-| **Progreso** | 3 / 10 completadas |
-| **Última acción** | T-017 completada — Propuesta de diseño overhaul definida: estructura 4 páginas con nuevas secciones (métricas, aliados, testimonios, galería instalaciones, proceso paso a paso, créditos hipotecarios), motion (fade-in, hover lift, parallax), tokens de diseño listos para T-022. Sin tocar contenidos, logos ni colores. |
-| **Siguiente acción** | Ejecutar T-018 — Rediseñar página Inicio: hero editorial, eslogan, métricas de confianza, servicios destacados, aliados, testimonios |
+| **Progreso** | 4 / 10 completadas |
+| **Última acción** | T-018 completada — Rediseño página Inicio: sección Métricas de Confianza (Desde 2013, 30+ años, 6 servicios, 44600 Guadalajara), servicios expandidos de 3 a 6 tarjetas, estilos CSS stat-card/stat-number, contadores animados |
+| **Siguiente acción** | Ejecutar T-019 — Rediseñar página Nosotros: perfil titular, valores institucionales, instalaciones con galería tipo Hafnia |
 | **Modo** | FAST |
 | **Bloqueos activos** | — |
 
