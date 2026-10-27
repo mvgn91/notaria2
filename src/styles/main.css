@@ -427,15 +427,6 @@ body {
   75% { transform: translate(30px, 15px) scale(1.02); }
 }
 
-/* ── Stats Section ── */
-.stat-number {
-  @apply font-display font-bold;
-  line-height: 1;
-}
-
-.stat-counter {
-  display: inline-block;
-}
 
 /* ── Service Cards ── */
 .service-card {
@@ -2271,37 +2262,3 @@ body {
   }
 }
 
-/* ── Métricas de Confianza (Stats) ── (overhaul T-018) */
-.stat-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.stat-number {
-  font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1;
-  transition: all 0.4s ease;
-}
-
-.stat-card:hover .stat-number {
-  color: var(--color-primary-light);
-}
-
-.stat-card:hover .text-cream/5 {
-  opacity: 0.12;
-}
-
-@media (max-width: 640px) {
-  .stat-card {
-    padding: 1.5rem !important;
-  }
-
-  .stat-card .text-\[6rem\] {
-    font-size: 3rem !important;
-  }
-
-  .stat-number.text-4xl {
-    font-size: 2.5rem !important;
-  }
-}
