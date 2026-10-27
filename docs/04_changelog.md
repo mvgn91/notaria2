@@ -56,6 +56,21 @@
 - Build de producción verificado (4 páginas, sin errores)
 - Sin cambios en contenidos, logos ni colores institucionales
 
+## v1.4.0 — 26/10/2026
+
+- **React integrado al proyecto**: `@astrojs/react@7.1.1`, `react@19.3.1`, `react-dom@19.3.1` (+ types). Habilita motion UI con componentes React Bits en todo el sitio
+- **T-026 — Threads (React Bits) en la hero**
+  - Componente vendorizado en `src/components/reactbits/Threads.jsx` + `Threads.css`, con aviso de copyright MIT + Commons Clause conservado
+  - Isla React con `client:only="react"` dentro de `#hero-bg-layer`; el componente no se server-renderiza
+  - Config aplicada: color crema `[0.965, 0.953, 0.922]`, `opacity 0.2`, `lineCount 48`, `speed 0.22`, `thickness 0.45`, `softness 1.7`, `angle 18`, `fade 0.3`, `parting 0.22`, interacción de cursor activa
+  - Retirada la retícula CSS (`.hero-bg-institutional`) para no competir con las líneas; queda halo verde + viñeta
+  - El componente respeta `prefers-reduced-motion` y pausa fuera del viewport o con la pestaña oculta
+- **Fix crítico**: `ReferenceError: React is not defined` — el JSX se compilaba con runtime clásico; se añadió el import explícito de React en el componente
+- **T-027 — Scripts corregidos**: `dev` y `preview` ejecutaban `vite`, que servía los 4 HTML estáticos de la raíz (código legado) en lugar de las páginas Astro. Ahora `astro dev` / `astro preview`. El sitio de producción siempre fue Astro; el preview de desarrollo mostraba otra cosa
+- Verificación en navegador (Chromium headless + CDP): canvas 1440×900, contexto WebGL2 válido, `gl.getError()=0`, animación con frames distintos entre capturas, `scrollWidth == innerWidth` en 390, 768, 1280 y 1920 px
+- `.astro/` agregado a `.gitignore`
+- **Observación**: `astro` 6.4.2 advierte que el proyecto tiene Vite 8 y requiere Vite 7. El build funciona, pero conviene alinear versiones antes del deploy
+
 ## v1.0.0 — 24/06/2026
 
 - Implementación inicial del sitio web

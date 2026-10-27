@@ -27,3 +27,5 @@ mvgnlabs-starter-kit-main.zip
 
 # OS/Docker
 .DS_Store
+# Astro cache
+.astro/

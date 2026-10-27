@@ -7,10 +7,10 @@
 | Campo | Valor |
 |-------|-------|
 | **Estado** | READY_TO_BUILD |
-| **Tarea activa** | T-026 |
-| **Progreso** | 11 / 13 completadas |
-| **Última acción** | T-025 completada: hero de Inicio rediseñada — eslogan editorial "Su patrimonio, en firme." en Fraunces, CTA crema + WhatsApp + teléfono, fondo institucional sin imágenes externas (retícula notarial + halo verde + viñeta), pie institucional. Sección de métricas de confianza eliminada por indicación del operador. CSS de stat-card/stat-number depurado. Build de producción OK. |
-| **Siguiente acción** | T-026: integrar el asset de React Bits / 21st.dev que entregue el operador en `#hero-bg-layer`; revisión visual del operador; luego merge a main y T-024 (deploy) |
+| **Tarea activa** | T-028 |
+| **Progreso** | 12 / 14 completadas |
+| **Última acción** | T-026 + T-027 completadas: React integrado en el proyecto (@astrojs/react 7.1.1 + React 19.3.1) y componente Threads de React Bits vendorizado en `src/components/reactbits/` e integrado en la hero como capa WebGL2. Se corrigió `React is not defined` (runtime JSX clásico). Verificado en navegador real: WebGL2 activo, canvas 1440×900, animación avanzando, sin overflow horizontal en 390/768/1280/1920. Scripts `dev`/`preview` corregidos: apuntaban a Vite estático en lugar de Astro. |
+| **Siguiente acción** | T-028: retirar el código legado (4 HTML de raíz + public_html/) con autorización del operador; luego revisión visual de la hero y T-024 (deploy) |
 | **Modo** | FAST |
 | **Bloqueos activos** | — |
 

@@ -41,9 +41,11 @@
 | T-022 | Implementar nuevos tokens de diseño (tipografía, espaciado, componentes, motion) | Completada | Media | T-017 | RNF-01, RNF-04 | — |
 | T-023 | Optimizar rendimiento (Lighthouse), SEO y accesibilidad | Completada | Alta | T-018 a T-021 | RNF-02, RNF-03 | — |
 | T-025 | Rediseñar hero de Inicio: eslogan editorial, CTA crema/WhatsApp, retícula institucional, fondo sin imágenes externas | Completada | Alta | T-018 | RF-01 | — |
-| T-026 | Integrar asset de React Bits / 21st.dev en la hero y validar retícula visual con el operador | Pendiente | Alta | T-025 | RNF-01, RNF-02 | ADR-01 |
+| T-026 | Integrar Threads (React Bits) en la hero como capa de motion WebGL2 | Completada | Alta | T-025 | RNF-01, RNF-02 | ADR-01 |
+| T-027 | Infraestructura React (@astrojs/react 7 + React 19) y corrección de scripts dev/preview (apuntaban a Vite estático) | Completada | Alta | T-026 | RNF-01 | — |
+| T-028 | Consolidar código legado: retirar index.html/nosotros.html/servicios.html/ubicacion.html de raíz y public_html/ (no se despliegan) | Pendiente | Media | T-027 | — | — |
 | T-024 | Desplegar overhaul en producción (Vercel) y verificar | Pendiente | Alta | T-023, T-026 | RNF-06 | — |
 
-**Resumen nueva fase:** 11 / 13 tareas completadas
+**Resumen nueva fase:** 12 / 14 tareas completadas
 
 **Regla:** No ejecutar tareas sin criterios de aceptación definidos y sin transitar el estado en `06_state_report.md`.
