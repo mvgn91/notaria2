@@ -346,6 +346,18 @@ body {
   background: radial-gradient(ellipse 78% 68% at 40% 46%, transparent 0%, rgba(9, 21, 14, 0.62) 100%);
 }
 
+/* Marca de agua — logo oficial al pie derecho de la hero.
+   Se invierte a blanco y se desvanece en los bordes para que no se lea
+   como una imagen pegada. No recorta ni deforma el logo. */
+.hero-watermark {
+  filter: brightness(0) invert(1);
+  opacity: 0.09;
+  pointer-events: none;
+  user-select: none;
+  -webkit-mask-image: radial-gradient(ellipse 64% 64% at 50% 50%, #000 28%, transparent 78%);
+  mask-image: radial-gradient(ellipse 64% 64% at 50% 50%, #000 28%, transparent 78%);
+}
+
 /* CTA principal sobre fondo verde — usa el crema institucional */
 .btn-cream {
   background: var(--color-cream);
