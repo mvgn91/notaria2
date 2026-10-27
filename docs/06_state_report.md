@@ -8,9 +8,9 @@
 |-------|-------|
 | **Estado** | READY_TO_BUILD |
 | **Tarea activa** | T-015 |
-| **Progreso** | 2 / 10 completadas |
-| **Última acción** | T-016 completada — Análisis de referencias del rubro: notariapublica11.mx (métricas, titular, servicios detallados), pitblado.com (motion UI, valores, hero editorial), hafnialaw.com (galería editorial, proceso en pasos, numeración). Tokens de diseño definidos para T-022. |
-| **Siguiente acción** | Ejecutar T-017 — Definir propuesta de diseño overhaul (estructura, wireframes, motion) manteniendo contenidos, logos y colores |
+| **Progreso** | 3 / 10 completadas |
+| **Última acción** | T-017 completada — Propuesta de diseño overhaul definida: estructura 4 páginas con nuevas secciones (métricas, aliados, testimonios, galería instalaciones, proceso paso a paso, créditos hipotecarios), motion (fade-in, hover lift, parallax), tokens de diseño listos para T-022. Sin tocar contenidos, logos ni colores. |
+| **Siguiente acción** | Ejecutar T-018 — Rediseñar página Inicio: hero editorial, eslogan, métricas de confianza, servicios destacados, aliados, testimonios |
 | **Modo** | FAST |
 | **Bloqueos activos** | — |
 

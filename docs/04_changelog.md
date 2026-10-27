@@ -30,6 +30,7 @@
 - Referencias de diseño: notariapublica11.mx (base aceptada), pitblado.com (motion UI), hafnialaw.com (galería editorial)
 - T-015 completada: análisis comparativo prototipo cliente vs sitio actual, 8 brechas identificadas
 - T-016 completada: análisis de referencias del rubro (notariapublica11.mx, pitblado.com, hafnialaw.com), tokens de diseño definidos
+- T-017 completada: propuesta de diseño overhaul definida (estructura, wireframes descriptivos, motion, tokens)
 
 ## v1.0.0 — 24/06/2026
 
