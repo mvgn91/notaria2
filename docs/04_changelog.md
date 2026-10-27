@@ -56,6 +56,14 @@
 - Build de producción verificado (4 páginas, sin errores)
 - Sin cambios en contenidos, logos ni colores institucionales
 
+## v1.4.1 — 26/10/2026
+
+- **Fix crítico de CSS en desarrollo**: `astro dev` fallaba con `Missing field moduleType` en `builtin:vite-react-refresh-wrapper`. Causa: el proyecto tenía `vite@8` en la raíz mientras Astro 6.4.2 usa `vite@7`; al añadir `@astrojs/react` su plugin de refresh se cargaba contra la instancia equivocada y toda la hoja de estilos dejaba de transformarse
+- **Alineación del stack**: `astro` 6.4.2 → **7.4.2**, que sí declara `vite ^8.3.4`. `vite` queda en `^8.3.5`; `@vitejs/plugin-react` 6.1.2. Sin `overrides`: una sola copia de Vite, deduplicada
+- Verificación con Chromium headless + CDP sobre `astro dev` (4321): `body` Inter sobre `rgb(246,243,235)`, hero `rgb(26,61,42)`, `h1` Fraunces 104px crema, canvas 1440×900, 0 errores de consola, sin overflow, hero = alto del viewport, animación con frames distintos (16 % de canales alterados entre capturas)
+- `astro dev` 7 arranca como daemon (`astro dev start|status|stop|logs`): por eso los procesos lanzados desde el shell morían con SIGTERM al cerrarse la terminal
+- `.astro/` deja de estar trackeado en git (es caché generada)
+
 ## v1.4.0 — 26/10/2026
 
 - **React integrado al proyecto**: `@astrojs/react@7.1.1`, `react@19.3.1`, `react-dom@19.3.1` (+ types). Habilita motion UI con componentes React Bits en todo el sitio
@@ -69,7 +77,7 @@
 - **T-027 — Scripts corregidos**: `dev` y `preview` ejecutaban `vite`, que servía los 4 HTML estáticos de la raíz (código legado) en lugar de las páginas Astro. Ahora `astro dev` / `astro preview`. El sitio de producción siempre fue Astro; el preview de desarrollo mostraba otra cosa
 - Verificación en navegador (Chromium headless + CDP): canvas 1440×900, contexto WebGL2 válido, `gl.getError()=0`, animación con frames distintos entre capturas, `scrollWidth == innerWidth` en 390, 768, 1280 y 1920 px
 - `.astro/` agregado a `.gitignore`
-- **Observación**: `astro` 6.4.2 advierte que el proyecto tiene Vite 8 y requiere Vite 7. El build funciona, pero conviene alinear versiones antes del deploy
+- **Observación**: `astro` 6.4.2 advierte que el proyecto tiene Vite 8 y requiere Vite 7. El build funciona, pero conviene alinear versiones antes del deploy — **resuelto en v1.4.1**
 
 ## v1.0.0 — 24/06/2026
 

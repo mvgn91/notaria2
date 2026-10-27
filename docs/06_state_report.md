@@ -9,7 +9,7 @@
 | **Estado** | READY_TO_BUILD |
 | **Tarea activa** | T-028 |
 | **Progreso** | 12 / 14 completadas |
-| **Última acción** | T-026 + T-027 completadas: React integrado en el proyecto (@astrojs/react 7.1.1 + React 19.3.1) y componente Threads de React Bits vendorizado en `src/components/reactbits/` e integrado en la hero como capa WebGL2. Se corrigió `React is not defined` (runtime JSX clásico). Verificado en navegador real: WebGL2 activo, canvas 1440×900, animación avanzando, sin overflow horizontal en 390/768/1280/1920. Scripts `dev`/`preview` corregidos: apuntaban a Vite estático en lugar de Astro. |
+| **Última acción** | T-026 + T-027 completadas y stack alineado (v1.4.1): React integrado (@astrojs/react 7.1.1 + React 19.3.1) y Threads de React Bits vendorizado en `src/components/reactbits/`, activo en la hero como capa WebGL2. Se corrigieron `React is not defined` (runtime JSX clásico) y el choque Vite 8 / Astro 6 (`Missing field moduleType`, rompía todo el CSS en dev) subiendo Astro a 7.4.2. Verificado en navegador real sobre `astro dev`: CSS correcto, WebGL2 válido, canvas 1440×900, animación viva, sin overflow en 390/768/1280/1920. Scripts `dev`/`preview` ahora apuntan a Astro (antes servían el HTML legado). |
 | **Siguiente acción** | T-028: retirar el código legado (4 HTML de raíz + public_html/) con autorización del operador; luego revisión visual de la hero y T-024 (deploy) |
 | **Modo** | FAST |
 | **Bloqueos activos** | — |
